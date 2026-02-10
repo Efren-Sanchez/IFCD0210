@@ -1,0 +1,859 @@
+/* 
+
+Ejemplos de uso de las propiedades básicas de CSS
+=================================================
+
+Autor: Efrén Sánchez
+
+*/
+
+/* 
+Este es un fichero con extensión .css, por lo que solo puede contener código 
+CSS, nada de HTML u otros lenguajes.
+
+Este fichero habría que enlazarlo o llamarlo desde el 'head' de un fichero HTML
+mediante una etiqueta link como la siguiente:
+
+	<link rel="stylesheet" href="style.css">
+*/
+
+/* --- Sintaxis de CSS --- */
+
+/* Regla CSS */
+selector {
+	propiedad: valor; /* Declaración */
+	propiedad: valor; /* Declaración */
+	...
+}
+/* Fin de la regla CSS */
+
+/* 
+Selectores
+----------
+
+Un selector puede ser:
+- cualquier etiqueta HTML.
+- cualquier identificador (#)
+- cualquier clase (.)
+- selectores avanzados
+- selectores con operadores
+
+Ejemplos de selectores:
+
+- Elemento HTML
+	h1 { }
+	
+- Clase
+	.nombre { }
+
+- Identificador
+	#identificador { }
+
+- Atributos
+	img[src]
+	a[href="http://www.google.es"]
+	
+- Pseudoclases
+	a:hover
+	
+- Pseudoelementos
+	p::first-line { }
+	
+- Descendientes
+	div p { }
+
+- Hijos
+	div > p { }
+	
+- Hermanos adyacentes
+	div + p { }
+
+- Hermanos (general)
+	div ~ p { }
+	
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
+
+
+Valores globales para propiedades
+---------------------------------
+
+Todas las propiedades pueden tener los valores globales:
+- inherit -> heredar del padre
+- initial -> valor inicial
+- revert
+- revert-layer
+- unset   -> borra su valor (¿?)
+
+
+Colores
+-------
+
+Los colores se pueden expresar de distintas maneras: en hexadecimal, rgb, 
+rgba, hsl, hsla o nombre del color normalizado en inglés: red, yellow, cyan, 
+blue, magenta, pink, tomato, green, azure, crimson, darkslategrey, etc. Hay 140.
+
+
+Medidas
+-------
+
+Las unidades de medida de tamaño son las siguientes:
+- absolutas: px, pt, pc, in, cm, mm
+- relativas: em, rem, %, ex, ch, fr
+- viewport:	 vw, vh, vmin, vmax
+
+En muchos casos, se pueden utilizar valores negativos para un tamaño, como -5px.
+
+/*-------------------------------------------------------*/
+
+/* --- CSS Reset --- */
+/* 
+Para eliminar las posibles reglas que puede añadir el navegador y no obtener 
+efectos indeseados en algunas circunstancias 
+*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	
+	/* Para que padding y margin no se sumen al width de los objetos */
+	box-sizing: border-box; 	/* content-box, border_box */
+}
+
+
+/* Color del texto */
+#colorTomato1 {color: tomato;}
+#colorTomato2 {color: #ff6347;}
+#colorTomato3 {color: rgb(255, 99, 71);}
+#colorTomato4 {color: hsl(9, 100%, 64%);}
+
+/* Con transparencia u opacidad al 100% (totalmente opaco) */
+#colorTomato5 {color: rgba(255, 99, 71, 1)}
+#colorTomato6 {color: hsla(9, 100%, 64%, 1)}
+
+/* Colores e Imágenes de fondo */
+body {
+	background-color: #cdcdcd;			/* transparent, currentcolor */
+
+	background-image: url("gatitos.png");
+	background-repeat: no-repeat; 		/* repeat, no-repeat, repetat-x, repeat-y */
+	background-position: right top;		/* left/right/center _ top/bottom/center */
+	background-attachment: fixed;		/* scroll, fixed, local */ 
+
+	background-size: cover; 			/* contain, cover, %, px px */
+	background-origin: border-box;		/* border-box, padding-box, content-box */ /* Ignorado si background-attachment es fixed */
+	background-clip: border-box;		/* border-box, padding-box, content-box, text */
+}
+
+/* Bordes */
+p.dotted 	{border-style: dotted;}
+p.dashed 	{border-style: dashed;}
+p.solid 	{border-style: solid;}
+p.double 	{border-style: double;}
+p.groove 	{border-style: groove;}
+p.ridge 	{border-style: ridge;}
+p.inset 	{border-style: inset;}
+p.outset 	{border-style: outset;}
+p.none 		{border-style: none;}
+p.hidden 	{border-style: hidden;}
+p.mix 		{border-style: dotted dashed solid double;}
+
+p {
+    border-width: 5px;		/* Cualquier unidad de tamaño */
+    border-style: solid;
+    border-color: black;
+	border-radius: 5px;
+}
+
+p {
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+}
+
+/* Márgenes */
+p {
+	margin: 10px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	margin-right: 10px;
+	margin-left: 8px;
+}
+
+h1 {margin: 0;}			/* Los cuatro lados */
+h1 {margin: 0 0;}		/* Arriba y abajo _ derecha e izquierda */
+h1 {margin: 0 0 50px;}	/* Arriba _ derecha e izquierda _ abajo */
+h1 {margin: 0 0 50px 0;}/* Arriba _ derecha _ abajo _ izquierda*/ /* Sentido horario */
+
+/* Padding */
+p {
+	padding: 10px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 7px;
+	padding-left: 8px;
+}
+
+h1 {padding: 25px;}
+h1 {padding: 25px 50px;}
+h1 {padding: 25px 50px 75px;}
+h1 {padding: 25px 50px 75px 100px;}
+
+/* Altura y anchura */
+/* Valores posibles para ambos: <tamaño>, auto, %, initial, inherit */
+div {
+	height: 200px;
+	width: 50%;
+}
+
+div {
+	max-height: 100px;
+	max-width: 1000px;
+	
+	min-height: 20px;
+	min-width: 100px;
+}
+
+div {
+	max-block-size: 150px;
+	max-inline-size: 150px;
+	
+	min-block-size: 150px;
+	min-inline-size: 150px;
+	
+	writing-mode: horizontal-tb;	/* horizontal-tb, horizontal-bt, vertical-rl, vertical-lr */ 
+}
+
+/* Outline */
+p {
+	outline-style: solid;	/* Mismos estilos que para el borde */
+	outline-color: #000000;
+	outline-width: 10px;
+	outline-offset: 10px;	
+}
+
+/* Texto */
+p {
+	color: blue;
+	background-color: lightgrey;
+
+	/* Alineación */
+    text-align: center;				/* center, left, right, justify */
+    text-align-last: right;			/* center, left, right, justify */
+    direction: rtl;					/* ltr, rtl */
+    unicode-bidi: bidi-override;	/* normal, bidi-override, plaintext, isolate-override */
+    vertical-align: text-top;		/* baseline, text-top, text-bottom, sub, super */
+
+	/* Decoración */
+    text-decoration-line: overline;	/* overline, line-through, underline, blink, none, 
+										overline _ underline, overline _ underline _ line-through */
+    text-decoration-color: red;
+    text-decoration-style: solid;	/* Mismo estilos que para el borde */
+    text-decoration-thickness: 5px;	/* auto, from-font, <tamaño>, % */
+
+	/* Conversión mayus-minus */
+	text-transform: uppercase;		/* uppercase, lowercase, capitalize, none, full-width, full-size-kana */
+	
+	/* Espaciado */
+    text-indent: 10px;
+    letter-spacing: -2px;
+    line-height: 0.8;				/* normal, número real, <tamaño>, % */
+	word-spacing: -1px;
+    white-space: nowrap;			/* normal, nowrap, pre, pre-wrap, pre-line, break-spaces */
+
+	/* Sombreado */
+	text-shadow: 2px 2px 4px #000000;
+	text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+	text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+	
+    text-overflow: clip;		/* clip, ellipsis, <string> */
+    word-wrap: break-word;		/* normal, break-all, keep-all, break-word */
+    word-break: keep-all;		/* keep-all, break-all */
+    writing-mode: horizontal-tb;/* horizontal-tb, vertical-rl, vertical-lr */
+
+}
+
+
+/*
+Fuentes
+-------
+
+Primero indicamos la fuente que deseamos. Al final indicamos una familia genérica.
+Se pueden indicar distintas fuentes separadas por comas como fallbacks, para incrementar la compatibilidad.
+
+Familias genéricas: serif, sans-serif, monospace, cursive, fantasy, 
+					system-ui, ui-serif, ui-sans-serif, ui-monospace, ui-rounded, 
+					emoji, math, fangsong 
+					
+Mejores fuentes seguras para HTML y CSS: 
+    Sans-serif: Arial, Verdana, Tahoma, Trebuchet MS
+    Serif: Times New Roman, Georgia, Garamond
+    Monoespaciada: Courier New 
+    Cursiva: Brush Script MT
+
+Buenas combinaciones de fuentes:
+	Georgia and Verdana					Helvetica and Garamond 		Merriweather and Open Sans
+	Ubuntu and Lora						Abril Fatface and Poppins	Cinzel and Fauna One
+	Fjalla One and Libre Baskerville	Space Mono and Muli			Spectral and Rubik
+	Oswald and Noto Sans
+	
+ */
+p {
+	font-family: serif;
+	font-family: "Times New Roman", serif;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-family: "Times New Roman", Georgia, Garamond, Times, serif;
+	
+	font-style: italic;			/* normal, italic, oblique, oblique <ángulo> */ /* Ángulo: válido de -90deg a 90deg */
+	font-weight: bold;			/* normal, bold, lighter, bolder, [1,1000] */ /* Normal: 400, Bold: 700 */ 
+	
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant */
+	font-variant: small-caps;	/* normal, small-caps, all-small-caps, petite-caps, y un largo etc. */
+	font-variant: no-common-ligatures proportional-nums;
+	font-variant: common-ligatures tabular-nums;
+	font-variant: small-caps slashed-zero;
+	
+	font-size: 2.5em;
+}
+
+/* Enlaces */
+/* unvisited link */
+a:link {
+
+}
+
+/* visited link */
+a:visited {
+
+}
+
+/* mouse over link */
+a:hover {
+
+}
+
+/* selected link */
+a:active {
+
+} 
+
+/* Ejemplo 1 */
+a:link, a:visited {
+	background-color: #f44336;
+	color: white;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active {
+	background-color: red;
+}
+
+/* Ejemplo 2 */
+a:link, a:visited {
+	background-color: white;
+	color: black;
+	border: 2px solid green;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active {
+	background-color: green;
+	color: white;
+}
+
+/* Cursores */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/cursor */
+div {
+	cursor: auto; /* auto, crosshair, default, e-resize, help, move, n-resize, ne-resize, nw-resize, pointer, progress ,s-resize ,se-resize, sw-resize, text, w-resize, wait, zoom-in, zoom-out, y un largo etc. */ 
+}
+
+/* Listas */
+ul {
+	list-style-type: circle;		/* none, circle, disc, square */
+	list-style-image: url('sqpurple.gif');
+	list-style-position: outside;	/* inside, outside */
+}
+
+ol {
+	list-style-type: lower-alpha;	/* none, armenian, decimal, decimal-leading-zero, etc. */
+}
+
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+ul.c {list-style-type: square;}
+
+ol.d {list-style-type: armenian;}
+ol.e {list-style-type: cjk-ideographic;}
+ol.f {list-style-type: decimal;}
+ol.g {list-style-type: decimal-leading-zero;}
+ol.h {list-style-type: georgian;}
+ol.i {list-style-type: hebrew;}
+ol.j {list-style-type: hiragana;}
+ol.k {list-style-type: hiragana-iroha;}
+ol.l {list-style-type: katakana;}
+ol.m {list-style-type: katakana-iroha;}
+ol.n {list-style-type: lower-alpha;}
+ol.o {list-style-type: lower-greek;}
+ol.p {list-style-type: lower-latin;}
+ol.q {list-style-type: lower-roman;}
+ol.r {list-style-type: upper-alpha;}
+ol.s {list-style-type: upper-latin;}
+ol.t {list-style-type: upper-roman;}
+ol.u {list-style-type: none;}
+ol.v {list-style-type: inherit;}
+
+/* Tablas */
+table, td, th {
+	border: 1px solid;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr:hover {
+	background-color: coral;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+th, td {
+	padding: 15px;
+	text-align: left;
+}
+
+td {
+	height: 50px;
+	vertical-align: center;
+}
+
+/* Display */
+/*
+Elementos de tipo block en HTML:
+
+<address>	<article>	<aside>		<blockquote>	<canvas>		<dd>
+<div>		<dl>		<dt>		<fieldset>		<figcaption>	<figure>	<footer>	<form>		<h1>-<h6>	<header>		<hr>			<li>
+<main>		<nav>		<noscript>	<ol>			<p>				<pre>
+<section>	<table>		<tfoot>		<ul>			<video>			
+
+
+Elementos de tipo inline en HTML:
+
+<a>			<abbr>	<acronym>	<b>			<bdo>		<big>		<br>
+<button>	<cite>	<code>		<dfn>		<em>		<i>			<img>
+<input>		<kbd>	<label>		<map>		<object>	<output>	<q>		
+<samp>		<script><select>	<small>		<span>		<strong>	
+<sub>		<sup>	<textarea>	<time>		<tt>		<var>
+
+
+Valores posibles para display:
+
+inline, block, contents, flex, grid, inline-block, inline-flex, inline-grid, 
+inline-table, list-item, run-in, table, table-caption, table-column-group,
+table-header-group, table-footer-group, table-row-group, table-cell, 
+table-column, table-row, none, initial, inherit
+
+*/
+
+div {
+	display: none;		/* inline, block, inline-block, none, flex, grid */
+}
+
+
+/* Posición */
+div {
+	position: static;	/* static, relativa, fixed, absolute, sticky */
+}
+
+div.static {	/* Posicionamiento por defecto */
+	position: static;
+}
+
+div.relative {	/* Posicionamiento partiendo de su posición normal */
+	position: relative;
+	left: 30px;		/* left, right, top, bottom */
+}
+
+div.fixed {		/* Posicionamiento fijo con respecto al viewport (siempre fijo, aunque se haga scroll). No está en el flujo de representación normal: puede superponerse a otros elementos, no ocupa espacio con respecto a otros elementos */
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+div.absolute {	/* Posicionamiento con respecto a su antecesor inmediato. Si no tiene antecesores, se posiciona sobre el body. No está en el flujo de representación normal: puede superponerse a otros elementos, no ocupa espacio con respecto a otros elementos */
+	position: absolute;
+	top: 80px;
+	left: 0;
+}
+
+div.sticky {	/* Cambia su posicionamiento entre relative y fixed dependiendo de la posición de scroll */
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
+
+/* Z-index */
+img {
+	z-index: -1;		/* <entero> */
+}
+
+/* Desbordamientos */
+div {
+	overflow: visible;	/* visible, hidden, scroll, auto */
+}
+
+div {
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+	overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+/* Flotación */
+/* Ojo, poco recomendable si no se hace con cuidado */
+div {
+	float: right;		/* left, right, none */
+}
+
+div {
+	clear: both;		/* left, right, both, none */
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Centrado y alineamiento */
+/* Centrado para elementos de tipo block */
+div {
+	width: 50%;
+	margin: auto;		/* No tiene efecto si no se ha puesto valor a width */
+}
+
+/* Centrado para elementos de tipo inline */
+p {
+	text-align: center;
+}
+
+/* Centrado para imágenes */
+img {
+	display: block;
+	margin: auto;
+	width: 40%;
+}
+
+/* Alineamiento a derecha usando position */
+.derecha {
+	position: absolute;
+	right: 0px;
+}
+
+/* Alineamiento a derecha usando float */
+.derecha {
+	float: right;
+}
+
+/* Centrado vertical usando padding */
+.centrado {
+	padding: 70px 0;
+}
+
+.centrado {
+	padding: 70px 0;
+	text-align: center;
+}
+
+/* Centrado vertical usando line-height */
+.centrado {
+	line-height: 200px;
+	height: 200px;
+	text-align: center;
+}
+
+	/* Por si el texto tiene más de una línea: */
+	.centrado p {
+		line-height: 1.5;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+/* Centrado vertical usando position y transform */
+.centrado {
+	height: 200px;
+	position: relative;
+}
+
+.centrado p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Centrado vertical usando flexbox */
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+/* Opacidad (tranaparencia) */
+div {
+	opacity: 0.3;		/* Valor entre 0 y 1, siendo 0 totalmente transparente y 1 totalmente opaco */
+}
+
+/* Sombreado de objetos */
+div {
+	box-shadow: 10px 10px 5px 12px lightblue inset;
+}
+
+/* Gradientes (degradados) */
+#grad {
+	background-image: linear-gradient(red, yellow);
+}
+
+#grad {
+	background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+#grad {
+	background-image: linear-gradient(180deg, red, yellow);
+}
+
+#grad {
+	background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+#grad {
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+#grad {
+	background-image: radial-gradient(red, yellow, green);
+}
+
+#grad {
+	background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+
+#grad {
+	background-image: radial-gradient(circle, red, yellow, green); /* circle, ellipse */
+}
+
+#grad2 {
+	background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);	/* closest-side, farthest-side, closest-corner, farthest-corner */
+}
+
+#grad {
+	background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+
+#grad {
+	background-image: conic-gradient(red, yellow, green, blue, black);
+}
+
+#grad {
+	background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+}
+
+#grad {
+	background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+	border-radius: 50%;
+}
+
+#grad {
+	background-image: conic-gradient(from 90deg, red, yellow, green);
+}
+
+#grad {
+	background-image: conic-gradient(at 60% 45%, red, yellow, green);
+}
+
+#grad {
+	background-image: repeating-conic-gradient(red 10%, yellow 20%);
+	border-radius: 50%;
+}
+
+#grad {
+	background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+	border-radius: 50%;
+}
+
+/* Transformaciones 2D */
+/* 
+    translate()
+    rotate()
+    scaleX()
+    scaleY()
+    scale()
+    skewX()
+    skewY()
+    skew()
+    matrix()
+*/
+div {
+	transform: translate(50px, 100px);	/* Mueve en los ejes X e Y */
+}
+
+div {
+	transform: rotate(20deg); 			/* Puede ser positivo o negativo */
+}
+
+div {
+	transform: scale(2, 3);	/* Escalado en los ejes X e Y */
+/* Los dos números deben ser iguales si no se quiere deformar el objeto. Los números pueden ser decimales. */
+}
+
+div {
+	transform: scale(0.5, 0.5);
+}
+
+div {
+	transform: skew(20deg, 10deg);
+}
+
+/* Transformaciones 3D */
+/*
+    rotateX()
+    rotateY()
+    rotateZ()
+*/
+#myDiv {
+	transform: rotateX(150deg);	/* Rota en el eje X */
+}
+
+#myDiv {
+	transform: rotateY(150deg);	/* Rota en el eje Y */
+}
+
+#myDiv {
+	transform: rotateZ(90deg);	/* Rota en el eje Z */
+}
+
+/* Transiciones */
+/*
+    transition
+    transition-delay
+    transition-duration
+    transition-property
+    transition-timing-function
+		ease
+		linear
+		ease-in
+		ease-out
+		ease-in-out
+		cubic-bezier(n,n,n,n)
+*/
+div {
+	width: 100px;
+	height: 100px;
+	background: red;
+	transition: width 2s;
+}
+div:hover {
+	width: 300px;
+}
+
+div {
+	transition: width 2s, height 4s;
+}
+
+div {
+	transition-delay: 1s;
+}
+
+div {
+	transition: width 2s, height 2s, transform 2s;
+}
+
+div {
+	transition-property: width;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: 1s;
+}
+
+/* Animaciones */
+/* https://www.w3schools.com/css/css3_animations.asp */
+
+@keyframes example {
+	0%   {background-color:red; left:0px; top:0px;}
+	25%  {background-color:yellow; left:200px; top:0px;}
+	50%  {background-color:blue; left:200px; top:200px;}
+	75%  {background-color:green; left:0px; top:200px;}
+	100% {background-color:red; left:0px; top:0px;}
+}
+
+div {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background-color: red;
+	animation-name: example;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;		/* <int>, infinite */
+	animation-direction: alternate-reverse;	/* normal, reverse, alternate, alternate-reverse */
+	animation-delay: 2s;
+	animation-fill-mode: backwards;			/* forwards, backwards, both */
+}
+
+/* Media Queries */
+/*
+
+Media: 
+	all
+	print
+	screen 
+
+Propiedades comunes: orientation (landscape, portrait)	
+	max-height 	
+	min-height 	
+	height 	
+	max-width 	
+	min-width 	
+	width
+*/
+/*
+Para enlazar diferentes hojas de estilo dependiendo de distintas condiciones 
+
+	<link rel="stylesheet" media="print" href="print.css">
+	<link rel="stylesheet" media="screen" href="screen.css">
+	<link rel="stylesheet" media="screen and (min-width: 480px)" href="example1.css">
+	<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
+*/
+/*
+@media not|only mediatype and (media feature) and (media feature) {
+	CSS-Code;
+}
+*/
+
+body {
+	background-color: tan;
+}
+
+@media screen and (max-width: 992px) {
+	body {
+		background-color: blue;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		background-color: olive;
+	}
+}
