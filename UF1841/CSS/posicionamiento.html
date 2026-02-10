@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Ejemplo de posicionamiento CSS</title>
+	
+	<!-- Favicon -->
+	<link rel="icon" href="img/favicon.ico">
+	
+	<!-- Hoja CSS -->
+	<link rel="stylesheet" href="styles.css">
+	
+	<!-- Otras etiquetas meta -->
+	<meta name="keywords" content="HTML, CSS, position">
+	<meta name="description" content="Ejemplo de página web simple">
+	<meta name="author" content="Efrén Sánchez">
+
+  <!-- Buscadores web -->
+	<meta name="robots" content="all">
+	
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/915f578c68.js" crossorigin="anonymous"></script>
+	
+	<style>
+	/* CSS Reset */
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	
+	/* Clases generales */
+	.der {
+		float: right;
+	}
+	
+	.izq {
+		float: left;
+	}
+	
+	.centrado {
+		margin: auto;
+	}
+	
+	/* Body */
+	body {
+		background-image: url("https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		
+		font-family: "Roboto Condensed", sans-serif;
+	}
+	
+	/* Contenedor para acotar los márgenes del contenido */
+	#contenedor {
+		width: 800px;
+		margin: auto;
+	}
+	
+	/* Cabecera */
+	header {
+		background: silver;
+		height: 150px;
+		
+		background-image: url("https://electrolomas.com/wp-content/uploads/2024/01/board-453758_640.jpg");
+		background-size: cover;
+	}
+	
+	h1 {
+		padding: 40px;
+		
+		text-align: center;
+		font-family: "Libre Baskerville", serif;
+		font-size: 50px;
+		color: white;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+		/* text-shadow: 5px 5px 5px black, 5px 5px 5px red; */
+		
+	}
+	
+	/* Menú de navegación */
+	nav {
+		/* Propiedades innecesarias cuando metemos contenido */
+		/* background: gray; */
+		/* height: 50px; */
+		
+		position: sticky;
+		top: 0;
+	}
+	
+	nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333333;
+	}
+
+	nav li {
+		float: left;
+	}
+
+	nav li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 16px;
+		text-decoration: none;
+	}
+
+	nav li a:hover {
+		background-color: #111111;
+	}
+	
+	/* Contenido principal */
+	main {
+		/* Debe ser idéntico al tamaño del footer para que se vea todo el contenido correctamente */
+		padding-bottom: 150px;
+	
+		color: white;
+	
+		background-color: rgba(150,150,150,0.5); 
+		/* El tamaño solo es necesario si el contenido no alcanza el mínimo indicado */
+		/* height: 800px; */ 
+	}
+	
+	p {
+		padding: 20px;
+	}
+	
+	/* Pie de página */
+	footer {
+		height: 150px;
+		width: inherit;
+		
+		position: fixed;
+		bottom: 0;
+		
+		padding: 20px;
+		
+		text-align: center;
+
+		/*background: silver; */
+		background-image: url("https://electrolomas.com/wp-content/uploads/2024/01/board-453758_640.jpg");
+		background-size: cover;
+	}
+	
+	footer table {
+		margin: auto;
+	}
+	
+	.footer_icono {
+		display: inline-block;
+		
+		color: white;
+		font-size: 40px;
+		padding: 10px;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	}
+	</style>
+</head>
+<body>
+	<div id="contenedor">
+		<header>
+			<h1 class="libre-baskerville-bold">Posicionamiento CSS</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+				<li><a href="#news">Servicios</a></li>
+				<li><a href="#contact">Contacto</a></li>
+				<li><a href="#about">Nosotros</a></li>
+				<li class="der"><a href="#about"><i class="fa-solid fa-envelope"></i></a></li>
+			</ul>
+		</nav>
+		
+		<main>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, ipsum a egestas venenatis, nibh nulla tincidunt lectus, ac rutrum massa ex eu justo. Etiam gravida semper justo, vitae mollis nisl. Donec sed nulla in diam pulvinar lobortis in quis massa. Ut scelerisque dolor sed dolor gravida, sit amet laoreet magna ullamcorper. Aenean scelerisque facilisis dictum. Suspendisse non nulla a felis sollicitudin sollicitudin in sit amet ipsum. Curabitur a neque ac lectus luctus blandit sit amet id libero. Duis vel purus a nisi convallis iaculis id ultrices ante. Pellentesque malesuada, orci et lobortis elementum, massa odio condimentum nibh, eu aliquet massa tortor ut lorem. Vivamus vestibulum consequat congue. Nam maximus lobortis dolor, id ornare sem varius tincidunt.</p>
+
+			<p>Vivamus eleifend arcu orci, vitae sodales odio varius quis. Aenean a ultrices elit, at rhoncus nibh. Duis consectetur risus nec porta venenatis. Maecenas finibus bibendum luctus. Ut varius scelerisque congue. Sed pharetra tortor at diam scelerisque luctus. Proin sodales libero ipsum, eu maximus augue consectetur eu. Pellentesque vitae nulla sit amet orci volutpat cursus. Duis gravida, ipsum et blandit elementum, tortor mauris malesuada risus, ut convallis nunc mi a velit.</p>
+
+			<p>Duis luctus, mauris et sodales dignissim, est libero viverra magna, id tincidunt purus dui quis metus. Phasellus turpis sapien, finibus vel pharetra et, aliquam et magna. Donec commodo dui augue, congue egestas velit condimentum in. Mauris vel suscipit elit. Morbi sed nunc sed libero cursus blandit quis vel dolor. Etiam in nibh magna. Nulla feugiat facilisis orci sit amet elementum. Quisque tempor, mauris sit amet mattis sollicitudin, mauris augue dapibus sapien, id faucibus lacus neque vel ligula. Sed aliquam mi id nunc scelerisque, in aliquet enim dignissim. Sed venenatis diam sed tortor fermentum, non varius lectus ornare. Mauris non ornare erat, vel bibendum dolor. Cras sed lobortis nisl. Nunc quis est et nisi pulvinar dignissim. Phasellus malesuada gravida cursus. Aenean placerat ac justo sed consequat.</p>
+
+			<p>Nulla tortor massa, accumsan ac mattis in, placerat sed ipsum. Integer tempor auctor arcu, vitae faucibus libero congue ac. Nulla facilisi. Nulla facilisi. Sed tincidunt sodales laoreet. Aliquam eu maximus justo. Suspendisse at urna elementum, dignissim mi eu, ultricies justo. Fusce ultricies commodo sapien, sed facilisis sem venenatis non. Duis efficitur mauris maximus nibh accumsan lacinia. Integer hendrerit arcu vitae massa lobortis, eu ultricies risus fringilla. Nam odio mauris, facilisis at luctus at, luctus ultricies nunc. Etiam molestie viverra ante lacinia egestas. Sed vel lectus et felis condimentum volutpat.</p>
+
+			<p>Aliquam id diam sed purus sollicitudin eleifend. Aliquam erat volutpat. Aenean condimentum sem at erat luctus aliquam. Ut efficitur odio eget est vulputate convallis. Mauris odio orci, aliquam ac elit nec, dapibus tincidunt nibh. Proin eget erat nec nisl consectetur porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis magna urna, scelerisque a ante at, pulvinar consequat tortor.</p>
+
+			<p>Curabitur et lorem quis eros tincidunt rhoncus lacinia vitae enim. Vivamus quis lectus sit amet leo varius placerat et at ex. Morbi sed fermentum risus. Aenean ut sem sed magna varius luctus eget commodo massa. Pellentesque porttitor dui ut viverra consequat. In gravida id nisl nec malesuada. Aliquam pellentesque felis id elit pharetra viverra. Aenean consequat mattis turpis sit amet consequat. Donec imperdiet odio imperdiet, ultrices neque non, sagittis justo. Etiam rutrum facilisis turpis eu viverra. Quisque ullamcorper, mauris sed pretium tristique, augue metus tempus tellus, nec auctor elit lectus nec turpis. Sed egestas ante eu libero mattis faucibus.</p>
+
+			<p>Maecenas a pretium nulla, eget gravida ex. Donec tortor tellus, blandit eu neque eu, tristique tincidunt eros. Proin rhoncus purus eu volutpat blandit. Mauris convallis lobortis sapien, finibus egestas erat sollicitudin vel. Integer tempor quis sapien eget ultrices. Donec sed diam consequat, condimentum ipsum non, accumsan lorem. Proin sit amet nulla nec enim ullamcorper eleifend auctor vel enim. Cras tellus lorem, aliquet at faucibus quis, posuere vitae enim. Aliquam sed lacinia tellus. Nullam in convallis odio. Donec in tristique ex. Morbi at fringilla quam. Nullam sodales porta mattis. Duis dictum felis eu metus pharetra, id interdum neque molestie. Vivamus cursus rhoncus risus ac commodo. Curabitur non risus orci.</p>
+
+			<p>Aenean finibus vel velit eu lobortis. Duis ut enim maximus, porta elit in, malesuada mi. Pellentesque iaculis lacus a vehicula gravida. Aenean sagittis, quam feugiat elementum efficitur, urna augue aliquet enim, ac laoreet metus velit ac dui. Cras varius justo malesuada, finibus purus quis, suscipit lacus. Aenean vitae sem sollicitudin, finibus odio egestas, pulvinar est. Donec et tincidunt leo. Maecenas at arcu neque. Proin sed suscipit lectus. Sed non laoreet sapien. Nunc ipsum nibh, euismod mattis efficitur in, luctus non leo. Morbi fringilla varius lacus, eu faucibus ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed et interdum libero. Vestibulum tincidunt arcu sit amet lectus gravida condimentum.</p>
+
+			<p>Vestibulum tempor, lacus ac ullamcorper euismod, turpis lorem laoreet diam, sed pharetra risus eros vitae ante. Suspendisse finibus nibh ante, ut lobortis mi lobortis eget. Donec luctus metus sapien, sit amet porttitor nulla vehicula in. Duis et libero lorem. Cras facilisis turpis nisi, et aliquam tellus fringilla a. In sit amet mauris ex. Vestibulum viverra sem facilisis, vehicula quam eu, auctor sapien. Etiam eget posuere mi, eget lobortis mauris.</p>
+
+			<p>Vivamus congue ac arcu sed posuere. Aliquam commodo risus in orci rhoncus, a luctus nisl ornare. Quisque non semper metus. Sed eget metus et nibh imperdiet sollicitudin. Sed in sem nec urna auctor suscipit. Sed vestibulum mi nisl, at placerat metus efficitur a. Duis molestie eros nisi. Sed eleifend posuere lorem, ut luctus nibh rhoncus et. Sed convallis lorem vitae enim lacinia viverra. Morbi eget lobortis lacus. Fusce efficitur risus eu dui lacinia, vehicula ultricies nisl ultrices. Donec id justo elit. Praesent at imperdiet ex.</p>
+		</main>
+		
+		<footer>
+			<table>
+				<tr>
+					<td><i class="fa-brands fa-facebook footer_icono"></i></td>
+					<td><i class="fa-brands fa-twitter footer_icono"></i></td>
+					<td><i class="fa-brands fa-instagram footer_icono"></i></td>
+					<td><i class="fa-brands fa-tiktok footer_icono"></i></td>
+				</tr>
+				<tr>
+					<td><i class="fa-brands fa-linkedin footer_icono"></i></td>
+					<td><i class="fa-brands fa-discord footer_icono"></i></td>
+					<td><i class="fa-brands fa-youtube footer_icono"></i></td>
+					<td><i class="fa-brands fa-google footer_icono"></i></td>
+				</tr>
+			</table>
+			<br>
+		</footer>
+	</div>
+</body>
+</html>
