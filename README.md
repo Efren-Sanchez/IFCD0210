@@ -2,6 +2,8 @@
 
 ### Certificado de profesionalidad del Catálogo de Especialidades Formativas del SEPE.
 
+---
+
 | Código / Módulo / Unidad | Descripción | Horas totales |
 |---------------------------|-------------|--------------:|
 | 1. MF0491_3 | Programación web en el entorno cliente | 180 |
@@ -14,6 +16,8 @@
 | 2.3. UF1846 | Desarrollo de aplicaciones web distribuidas | 60 |
 | 3. MF0493_3 | Implantación de aplicaciones Web en entornos internet, intranet y extranet | 90 |
 | MP0391 | Desarrollo de aplicaciones con tecnologías web | 80 |
+
+---
 
 - [Sede electrónica del SEPE](https://sede.sepe.gob.es/especialidadesformativas/RXBuscadorEFRED/DetalleEspecialidad.do?codEspecialidad=IFCD0210)
 - [Ficha del certificado](https://www.sepe.es/HomeSepe/dam/jcr:e2390b18-e9f5-4a72-97c4-518410671edb/IFCD0210_ficha.pdf)
