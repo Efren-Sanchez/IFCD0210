@@ -2,7 +2,7 @@
 
 ### Certificado de profesionalidad del Catálogo de Especialidades Formativas del SEPE.
 
-Nivel: 3
+Nivel: 3. 
 Horas: 590
 
 Desarrollo web frontend y backend
