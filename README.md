@@ -17,4 +17,3 @@
 
 - [Sede electrónica del SEPE](https://sede.sepe.gob.es/especialidadesformativas/RXBuscadorEFRED/DetalleEspecialidad.do?codEspecialidad=IFCD0210)
 - [Ficha del certificado](https://www.sepe.es/HomeSepe/dam/jcr:e2390b18-e9f5-4a72-97c4-518410671edb/IFCD0210_ficha.pdf)
-- 
