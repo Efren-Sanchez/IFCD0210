@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Réplica de la web https://vanesaherreros.com/ -->
+<head>
+	<!-- Etiquetas técnicas -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Información sobre la propia página -->	
+	<title>Perruqueria Pels Pèls</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<meta name="author" 
+			content="Efrén Sánchez">
+	<meta name="description" 
+			content="Ejemplo de página web en HTML5 y CSS3">
+	<meta name="keywords" 
+			content="plantilla, template, HTML, HTML5, CSS, CSS3, web">
+	
+	<!-- Motores de búsqueda: queremos que nos indexen -->
+	<meta name="robots" content="all">
+	
+	<!-- Hoja de estilo propia -->
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="stylesheet" media="print" href="css/print.css">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/889d999436.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://kit.fontawesome.com/915f578c68.js" crossorigin="anonymous"></script> -->
+	
+</head>
+<body>
+  <div id="contenedor">
+	<header>
+		<div id="barra_superior">
+			<ul>
+				<li>
+					<a href="tel:+34964964964">
+						<i class="fa-solid fa-phone icono_grande"></i> 
+						964 964 964
+					</a>
+				</li>
+				<li>
+					<a href="mailto:reservas@pelspels.com">
+						<i class="fa-solid fa-envelope icono_grande"></i> 
+						reservas@pelspels.com
+					</a>
+				</li>
+				<li class="derecha">
+					<i class="fa-brands fa-facebook icono_grande"></i>
+				</li>
+				<li class="derecha">
+					<i class="fa-brands fa-instagram icono_grande"></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="titulo">
+			<div class="contenedor_titulo"> <!-- Necesario para el fondo dinámico del título -->
+				<h1 class="franjas roboto-regular-italic">
+					Perruqueria Pels Pèls
+				</h1>
+			</div>
+			<!-- Para el efecto de cortina -->
+			<div id="cortina_izq"></div>
+			<div id="cortina_der"></div>
+		</div>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="index.html#nosotros">Nosotros</a></li>
+			<li><a href="index.html#tienda">Tienda</a></li>
+			<li><a href="index.html#fotos">Fotos</a></li>
+			<li><a href="index.html#contacto">Contacto</a></li>
+		</ul>
+	</nav>
+	
+	<hr>
+	
+	<main class="clearfix">
+		<section id="precios">
+			<table>
+				<tr>
+					<th colspan="2">Corte</th>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Señora</td>
+					<td>11.90 €</td>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Caballero</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte Niños (hasta 10 años)</td>
+					<td>7.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte de Flequillo</td>
+					<td>2.90 €</td>
+				</tr>
+				<tr>
+					<td>Repaso Barba</td>
+					<td>4.90 €</td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<th colspan="2">Peinado</th>
+				</tr>
+				<tr>
+					<td>Peinar Corto</td>
+					<td>12.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Medio</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Largo</td>
+					<td>16.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Extra Largo</td>
+					<td>19.90 €</td>
+				</tr>
+				<tr>
+					<td>Marcado Rulos Corto</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Corto</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Medio</td>
+					<td>5.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Largo</td>
+					<td>8.90 €</td>
+				</tr>
+				<tr>
+					<td>Secado al Aire</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Semi Recogido Desde</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Recogido Desde</td>
+					<td>22.90 €</td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<th colspan="2">Corte</th>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Señora</td>
+					<td>11.90 €</td>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Caballero</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte Niños (hasta 10 años)</td>
+					<td>7.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte de Flequillo</td>
+					<td>2.90 €</td>
+				</tr>
+				<tr>
+					<td>Repaso Barba</td>
+					<td>4.90 €</td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<th colspan="2">Peinado</th>
+				</tr>
+				<tr>
+					<td>Peinar Corto</td>
+					<td>12.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Medio</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Largo</td>
+					<td>16.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Extra Largo</td>
+					<td>19.90 €</td>
+				</tr>
+				<tr>
+					<td>Marcado Rulos Corto</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Corto</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Medio</td>
+					<td>5.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Largo</td>
+					<td>8.90 €</td>
+				</tr>
+				<tr>
+					<td>Secado al Aire</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Semi Recogido Desde</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Recogido Desde</td>
+					<td>22.90 €</td>
+				</tr>
+			</table>
+		
+			<table>
+				<tr>
+					<th colspan="2">Corte</th>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Señora</td>
+					<td>11.90 €</td>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Caballero</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte Niños (hasta 10 años)</td>
+					<td>7.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte de Flequillo</td>
+					<td>2.90 €</td>
+				</tr>
+				<tr>
+					<td>Repaso Barba</td>
+					<td>4.90 €</td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<th colspan="2">Peinado</th>
+				</tr>
+				<tr>
+					<td>Peinar Corto</td>
+					<td>12.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Medio</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Largo</td>
+					<td>16.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Extra Largo</td>
+					<td>19.90 €</td>
+				</tr>
+				<tr>
+					<td>Marcado Rulos Corto</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Corto</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Medio</td>
+					<td>5.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Largo</td>
+					<td>8.90 €</td>
+				</tr>
+				<tr>
+					<td>Secado al Aire</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Semi Recogido Desde</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Recogido Desde</td>
+					<td>22.90 €</td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<th colspan="2">Corte</th>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Señora</td>
+					<td>11.90 €</td>
+				</tr>
+				<tr>
+					<td>Lavar y Cortar Caballero</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte Niños (hasta 10 años)</td>
+					<td>7.90 €</td>
+				</tr>
+				<tr>
+					<td>Corte de Flequillo</td>
+					<td>2.90 €</td>
+				</tr>
+				<tr>
+					<td>Repaso Barba</td>
+					<td>4.90 €</td>
+				</tr>
+			</table>
+			
+			<table>
+				<tr>
+					<th colspan="2">Peinado</th>
+				</tr>
+				<tr>
+					<td>Peinar Corto</td>
+					<td>12.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Medio</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Largo</td>
+					<td>16.90 €</td>
+				</tr>
+				<tr>
+					<td>Peinar Extra Largo</td>
+					<td>19.90 €</td>
+				</tr>
+				<tr>
+					<td>Marcado Rulos Corto</td>
+					<td>10.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Corto</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Medio</td>
+					<td>5.90 €</td>
+				</tr>
+				<tr>
+					<td>Plancha Largo</td>
+					<td>8.90 €</td>
+				</tr>
+				<tr>
+					<td>Secado al Aire</td>
+					<td>3.90 €</td>
+				</tr>
+				<tr>
+					<td>Semi Recogido Desde</td>
+					<td>14.90 €</td>
+				</tr>
+				<tr>
+					<td>Recogido Desde</td>
+					<td>22.90 €</td>
+				</tr>
+			</table>
+		
+		</section>
+		
+		<section id="descarga">
+			<a href="#" onclick="window.print();"><i class="fa-solid fa-print"></i> Imprime la lista</a>
+			<br>
+			<br>
+			<a href="precios.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Lista de precios de PDF</a>
+			<br>
+			<br>
+			<a href="precios.pdf" download><i class="fa-solid fa-download"></i> Descarga el PDF</a>
+		</section>
+		
+		<section id="contacto">
+			<div id="contacto_izq">
+				<h3>Contacto</h3>
+				<table>
+					<tr>
+						<td><i class="fa-solid fa-phone icono_grande"></i></td>
+						<td><a href="tel:+34964964964">964.964.964</a></td>
+					</tr>
+					<tr>
+						<td><i class="fa-solid fa-envelope icono_grande"></i> </td>
+						<td><a href="mailto:reservas@pelspels.com">reservas@pelspels.com</a></td>
+					</tr>
+				</table>
+
+				<h3>Redes sociales</h3>
+				<table>
+					<tr>
+						<td><i class="fa-brands fa-facebook icono_grande"></i></td>
+						<td><a href="https://facebook.com" target="_blank">Facebook</a></td>
+					</tr>
+					<tr>
+						<td><i class="fa-brands fa-instagram icono_grande"></i></td>
+						<td><a href="https:instagram.com" target="_blank">Instagram</a></td>
+					</tr>
+				</table>
+
+			</div>
+			<div id="contacto_cen">
+				<h3>Horarios</h3>
+				<table>
+					<tr>
+						<td><i class="fa-regular fa-clock icono_grande"></i></td>
+						<td>Martes a Viernes: 10:00 - 19:30h</td>
+					</tr>
+					<tr>
+						<td><i class="fa-regular fa-clock icono_grande"></i></td>
+						<td>Sábado: 9:00 - 19:00h</td>
+					</tr>
+				</table>
+
+				<h3>Dónde estamos</h3>
+				<table>
+					<tr>
+						<td><i class="fa-solid fa-location-dot icono_grande"></i></td>
+						<td>C/ Bartolome Reus, 54</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>12005, Castellón de la Plana</td>
+					</tr>
+				</table>			
+			</div>
+			<div id="contacto_der">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.288852885912!2d-0.04136572356382454!3d39.97964978212492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60008046ac7119%3A0x2b53b1932ad6b84e!2sC.%20Bartolome%20Reus%2C%2054%2C%2012005%20Castell%C3%B3n%20de%20la%20Plana%2C%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1713653440698!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>			
+		</section>
+	</main>
+	
+	<footer>
+		<div id="cortina_abajo">
+			<div id="cortina_abajo_izq"></div>
+			<div id="cortina_abajo_der"></div>
+		</div>
+		<p>&copy; Efrén Sánchez - 2024</p>
+	</footer>
+  </div>
+  
+</body>
+</html>

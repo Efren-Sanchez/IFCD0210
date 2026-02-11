@@ -1,0 +1,686 @@
+/* ==================================================== */
+/* Perruqueria Pels Pèls */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: tomato;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+/* Header ---------------------------------------------------------- */
+
+/* Barra superior con enlaces */
+#barra_superior {
+	width: 100%;
+	height: 40px;
+	
+	background-color: #303030;
+}
+
+#barra_superior ul {
+	margin: 0 150px;
+	color: white;
+	
+	font-size: 1em;
+}
+
+#barra_superior li {
+	display: inline-block;
+	padding: 10px;
+}
+
+.icono_grande {
+	font-size: 20px;
+	transition: transform 0.5s, color 0.5s;
+}
+
+.icono_grande:hover {
+	transform: scale(1.5, 1.5);
+	color: tomato;
+}
+
+#barra_superior a:link, #barra_superior a:visited {
+	text-decoration: none;
+	color: white;
+	transition: color 0.5s;
+}
+
+#barra_superior a:hover, #barra_superior a:active {
+	color: tomato;
+}
+
+#barra_superior a:hover .icono_grande, #barra_superior a:active .icono_grande {
+	color: tomato;
+	transform: scale(1.5, 1.5);
+}
+
+/* Barra de título */
+#titulo {
+	width: 100%;
+	height: 130px;
+	position: relative;
+	background-color: transparent;
+}
+
+#cortina_izq {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 50%;
+	height: 130px;
+	background-color: black;
+	border-radius: 0 0 20px 0;
+}
+
+#cortina_der {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: -1;
+	width: 50%;
+	height: 130px;
+	background-color: black;
+	border-radius: 0 0 0 20px;
+}
+
+/* https://www.silocreativo.com/crea-textos-de-colores-animados-con-css/ */
+.contenedor_titulo {
+	color: white;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.contenedor_titulo .colorines {  
+	color: transparent;
+	background-image: linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700);
+	webkit-background-clip: text;
+	background-clip: text;
+	animation: color 3s linear infinite; 
+	background-size: 500%;  
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+}
+
+.contenedor_titulo .franjas {  
+	color: transparent;
+	background-color: tomato; /* #DC143C; */
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, white 25px, white 50px);
+	-webkit-background-clip: text;
+	background-clip: text;   
+	animation: color 50s linear infinite; 
+	background-size: 200%;  
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+}
+
+@keyframes color {
+	from { 
+		background-position: 0% 50%;
+	}
+	to { 
+		background-position: 100% 50%; 
+	}
+}
+
+/* Menú de navegación ---------------------------------------------- */
+nav {
+	position:sticky;
+	top: 0;
+	background-color: white;
+	z-index: 10;
+}
+
+nav ul {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+nav li {
+	display: inline-block;
+	width: 150px;
+	padding: 25px;
+	transition: transform 0.5s;
+}
+
+nav li:hover {
+	transform: scale(1.5, 1.5);
+}
+
+nav a:link, nav a:visited {
+	width: 150px;
+	padding: 25px;
+	color: black;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+nav a:hover, nav a:active {
+	color: tomato;
+}
+
+/* Barra de separación */
+/* https://stackoverflow.com/questions/12639823/hr-not-showing */
+hr {
+	height: 5px;
+	border-bottom: 1px solid black;
+	clear:both;
+	display:block;
+	background-color: tomato;
+}
+
+/* Main ----------------------------------------------------------- */
+section {
+	margin: 50px 0 0 0;
+	scroll-margin-top: 75px;
+}
+
+/* Bienvenida */
+#bienvenida {
+	/* text-align: center; */
+	position: relative;
+}
+
+#bienvenida img {
+	display: block;
+	width: 80%;
+	margin: auto;
+}
+
+/* #bienvenida div { */
+#letrero {
+	width: 30%;
+	height: 20%;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	padding: 50px;
+	text-align: center;
+	background-color: white;
+	opacity: 0.7;
+	font-size: 25px;
+	border-radius: 15px;
+
+	/* background-image: url('https://img.freepik.com/vector-gratis/fondo-tecnologia-digital-alambre-malla-red_1017-27428.jpg?size=626&ext=jpg&ga=GA1.1.1687694167.1713312000&semt=ais'); */
+	}
+
+#precio {
+	width: 10%;
+	height: 10%;
+	
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	
+	padding: 15px;
+	text-align: center;
+	background-color: tomato;
+	opacity: 0.9;
+	font-size: 50px;
+	border-radius: 15px;
+}
+
+#oferta {
+	/* width: 10%; */
+	/* height: 10%; */
+	
+	position: absolute;
+	bottom: 20%;
+	right: 15%;
+}
+#oferta:hover {
+	animation: shake 0.5s;
+	animation-iteration-count: infinite; 
+}
+
+#oferta a:link, #oferta a:visited {
+	width: 350px;
+	padding: 25px;
+	background-color: #f0f0f0;
+	color: tomato;
+	text-decoration: none;
+	border-radius: 15px;
+	transition: 0.5s;
+}
+
+#oferta a:hover, #oferta a:active {
+	color: black;
+	background-color: tomato;
+
+}
+
+@keyframes shake {
+	0%   { transform: translate(1px, 1px) rotate(0deg); }
+	10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+	20%  { transform: translate(-3px, 0px) rotate(1deg); }
+	30%  { transform: translate(3px, 2px) rotate(0deg); }
+	40%  { transform: translate(1px, -1px) rotate(1deg); }
+	50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+	60%  { transform: translate(-3px, 1px) rotate(0deg); }
+	70%  { transform: translate(3px, 1px) rotate(-1deg); }
+	80%  { transform: translate(-1px, -1px) rotate(1deg); }
+	90%  { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Nosotros */
+#nosotros {
+	overflow: hidden;
+}
+
+#nosotros_izq {
+	float: left;
+	width: 50%;
+	/* height: 600px; */
+}
+
+#nosotros_izq img {
+	width: 80%;
+	margin-left: 20%;
+	/* height: 600px; */
+}
+
+#nosotros_der {
+	float: left;
+	position: relative;
+	width: 50%;
+	/* height: 600px; */
+}
+
+#nosotros_der h2 {
+	margin: 10% 20% 0 10%;
+	font-size: 3vw;
+	font-weight: 200;
+	border-bottom: 1px solid black;
+}
+
+#nosotros_der div {
+	position: absolute;
+	top: 120%;
+	left: -10%;
+	width: 80%;
+	height: 140%;
+	background-color: white;
+	padding: 50px 100px;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+#nosotros_der div p {
+	font-weight: 200;
+}
+
+#nosotros a:link, #nosotros a:visited {
+	display: block;
+	margin: 20px auto;
+	width: 60%;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	font-size: 1vw;
+	transition: 0.5s;
+	box-shadow: 2px 2px 2px 5px #f0f0f0, -1px -1px 2px 5px #f0f0f0;
+}
+
+#nosotros a:hover, #nosotros a:active {
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	box-shadow: 2px 2px 2px 5px #d0d0d0, -1px -1px 2px 5px #d0d0d0;
+}
+
+/* Tienda */
+#tienda {
+	position: relative;
+	text-align: center;
+}
+
+#tienda img {
+	width: 80%;
+	padding: 15px;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tienda div {
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	min-width: 10%;
+	min-height: 10%;
+	padding: 1.5% 0;
+}
+
+#tienda a:link, #tienda a:visited {
+	padding: 30px;
+	border: 1px solid tomato;
+	border-radius: 5px;
+	background-color: #f0f0f0;
+	color: black;
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+#tienda a:hover, #tienda a:active {
+	border: 1px solid black;
+	background-color: tomato;
+	color: white;
+}
+
+/* Fotos */
+#fotos table, #fotos tr, #fotos th, #fotos td {
+
+}
+
+#fotos table {
+	width: 80%;
+	margin: auto;
+	/* border-collapse: collapse; */
+}
+
+#fotos td {
+	width: 33.33%;
+	height: 35vh;
+	overflow: hidden;
+}
+
+#fotos img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0.85;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+#fotos img:hover {
+	transform: scale(1.2, 1.2);
+	opacity: 1;
+}
+
+/* Mensaje */
+#mensaje {
+	width: 80%;
+	height: 18em;
+	margin: 50px auto;
+	border: 1px solid black;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+	padding: 25px;
+}
+
+#mensaje h2 {
+	text-align: center;
+}
+
+#mensaje div {
+	height: 10em;
+}
+
+#mensaje label {
+	display: inline-block;
+	width: 10%;
+	/* padding: 1em; */
+	margin: 1em 3em;
+	/* vertical-align: top; */
+}
+
+#mensaje input {
+	display: inline-block;
+	width: 70%;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+#mensaje input[type="submit"] {
+	display: block;
+	margin: auto;
+	width: 50%;
+	border: 0;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 15px;
+}
+
+#mensaje input:focus {
+	outline: 0;
+	border-bottom: 1px solid tomato;
+	box-shadow: 2px 2px 2px #d0d0d0;
+}
+
+#men {
+	vertical-align: top;
+}
+
+#mensaje textarea {
+	width: 70%;
+	height: 10.5em;
+	
+	/* border-top: 1px solid black; */
+	/* border-left: 1px solid black; */
+	border-bottom: 1px solid #d0d0d0;
+	border-right: 1px solid #d0d0d0;
+}
+
+#mensaje textarea:focus {
+	outline: 0;
+	/* border-top: 1px solid tomato; */
+	/* border-left: 1px solid tomato; */
+	border-bottom: 1px solid tomato;
+	border-right: 1px solid tomato;
+	box-shadow: 2px 2px 2px #d0d0d0;
+}
+
+#enviar {
+	display: inline-block;
+	width: 10px;
+	background-color: #f0f0f0;
+	border: 0;
+	margin: auto;
+}
+
+/* Contacto */
+#contacto {
+	width: 100%;
+	height: 20em;
+	padding: 0 10%;
+	background-color: #f0f0f0;
+	font-weight: 300;
+}
+
+#contacto div {
+	width: 33.33%;
+	height: 20em;
+	float: left;
+	padding: 1em;
+}
+
+#contacto h3 {
+	margin: 20px 0 5px 0;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+#contacto td {
+	height: 35px;
+	min-width: 30px;
+}
+
+#contacto a:link, #contacto a:visited {
+	text-decoration: none;
+	color: black;
+	transition: 0.5s;
+}
+
+#contacto a:hover, #contacto a:active {
+	color: tomato;
+}
+/* Footer ----------------------------------------------------*/
+footer {
+
+}
+
+#cortina_abajo {
+	position: relative;
+	height: 40px;
+	background-color: black;
+}
+
+#cortina_abajo_izq {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 40px;
+	background-color: #f0f0f0;
+	border-radius: 0 0 20px 0;
+}
+
+#cortina_abajo_der {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 40px;
+	background-color: #f0f0f0;
+	border-radius: 0 0 0 20px;
+}
+
+footer p {
+	background-color: black;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+/* ========================================================= */
+/* precios.html */
+#precios {
+	margin: 50px 10% 0 10%;
+	column-count: 3;
+	font-size: 1.5em;
+}
+
+#precios table, #precios tr, #precios th, #precios td {
+	/* border: 1px solid black; */
+	border: 0;
+	border-collapse: collapse;
+}
+
+#precios table {
+	margin: auto; 
+	margin-bottom: 45px;
+}
+
+#precios tr {
+	border-bottom: 1px solid black;
+}
+
+#precios tr:nth-child(even) {
+	background-color: #f0f0f0;
+}
+
+#precios th {
+	padding: 20px;
+}
+
+#precios td {
+	width: 400px;
+	padding: 10px;
+}
+
+#precios td:nth-child(even) {
+	width: 150px;
+	text-align: right;
+}
+
+#descarga {
+	text-align: center;
+}
+
+/* ========================================================= */
+/* Google Fonts */
+
+/* Roboto */
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}

@@ -1,0 +1,9 @@
+header, nav, #descarga, #contacto, footer {
+	display: none;
+}
+
+#precios {
+	margin: 50px 10% 0 10%;
+	column-count: 2;
+	font-size: 1.5em;
+}

@@ -1,0 +1,111 @@
+/* CSS reset */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	
+	box-sizing: border-box;
+}
+
+/* Clases genéricas */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* - Flotación */
+.derecha {
+	float: right;
+}
+
+.izquierda {
+	float: left;
+}
+
+/* - Anchura */
+.todo {
+	width: 100%;
+}
+
+.mitad {
+	width: 50%;
+}
+
+.tercio {
+	width: 33.33%;
+}
+
+.quinto {
+	width: 20%;
+}
+
+.dosquintos {
+	width: 40%;
+}
+
+.tresquintos {
+	width: 60%;
+}
+
+.cuatroquintos {
+	width: 80%;
+}
+
+.ancho_1000 {
+	width: 1000px;
+}
+
+
+/* - Altura */
+.alto_100 {
+	height: 100px;
+}
+
+.alto_200 {
+	height: 200px;
+}
+
+.alto_300 {
+	height: 300px;
+}
+
+.alto_400 {
+	height: 400px;
+}
+
+.alto_500 {
+	height: 500px;
+}
+
+
+/* - Color */
+.rojo {
+	background-color: red;
+}
+
+.azul {
+	background-color: blue;
+}
+
+.verde {
+	background-color: green;
+}
+
+.gris {
+	background-color: silver;
+}
+
+.negro {
+	background-color: black;
+}
+
+.blanco {
+	background-color: white;
+}
+
+
+/* - Centrado */
+.centrado {
+	margin: auto;
+}

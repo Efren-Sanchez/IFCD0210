@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html> 
+
+	<!-- Cabecera de la página -->
+	<head>
+	
+		<!-- Título de la ventana o pestaña -->
+		<title> Frutas y Verduras Online - Tu tienda de confianza </title>
+		
+		<!-- Esta etiqueta especifica la codificación de la página -->
+		<meta charset="UTF-8">
+		
+		<!-- Esta es la descripción del sitio web -->
+		<meta name="description" content="Frutas y Verduras Online - Tu tienda de confianza">
+
+		<!-- Estas son las palabras clave del sitio web -->
+		<meta name="keywords" content="HTML5, html, web, semantica, semantic, IFCD0110">
+		
+		<!-- Aquí se especifica el autor de la web -->
+		<meta name="author" content="Efrén Sánchez">
+		
+		<!-- Este script es necesario para que funcione el botón de subir arriba -->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		
+		<!-- Este script es necesario para que funcione el botón de subir arriba -->
+		<script>
+			$(document).ready(function(){
+
+				$('.ir-arriba').click(function(){
+					$('body, html').animate({
+						scrollTop: '0px'
+					},300 );
+				});
+
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 0){
+						$('.ir-arriba').slideDown(300);
+					} else {
+						$('.ir-arriba').slideUp(300);
+					};
+				});
+				
+			});
+		</script>
+		
+		<!-- Este código CSS es necesario para que funcione el botón de subir arriba -->
+		<style>
+			.ir-arriba {
+				padding:20px;
+				display:inline-block;
+				background:#024959;
+				color:#fff;
+				position: fixed;
+				font-size:20px;
+				bottom:20px;
+				right:20px;
+				display:none;
+				cursor:pointer;
+			}
+			
+			[class^="icon-"], [class*=" icon-"] {
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			.icon-arrow-up2:before {
+				content: "\2191";
+			}
+		</style>
+		
+	</head>
+	
+	<!-- Cuerpo de la página -->
+	<body>
+	
+		<!-- Esta etiqueta span es para el botón de subir arriba -->
+		<span class="ir-arriba icon-arrow-up2"></span>
+		
+		<!-- Utilizo una capa principal para agrupar todos los elementos y poder darle un ancho concreto y centrarla -->
+		<div style="width: 1000px; margin: auto;" >
+		
+			<!-- Marco la cabecera de la web con su etiqueta semantica -->
+			<!-- De esta manera le estoy definiendo a los motores de búsqueda el contenido claramente -->
+			<header style="font-family: Verdana, Geneva, sans-serif;">
+				<img src="https://img.freepik.com/vector-premium/logotipo-frutas-verduras_7085-159.jpg" width="100px" style="float: left">
+				<h1>Frutas y Verduras Online</h1>
+			</header>
+			
+			<!-- Marco el menú de la web con su etiqueta semantica -->
+			<nav style="float: right; font-family: Verdana, Geneva, sans-serif;">
+				| 
+				<a href="#">Inicio</a> |
+				<a href="#">Prodcutos</a> |
+				<a href="#">Servicios</a> |
+				<a href="#">¿Quiénes somos?</a> |
+				<a href="#">¿Dónde estamos?</a> |		
+				
+			</nav>
+			
+			<p><br><hr></p>
+			
+			<!-- En esta sección simplemente meto una foto colorida para hacer de separador -->
+			<section>
+				<img src="https://www.escuelanemomarlin.com/wp-content/uploads/2023/03/5-piezas-frutas-y-verduras.png" width="1000px">
+			</section>
+			
+			<hr>
+			
+			<!-- Marco una sección de la web con su etiqueta semantica -->
+			<section style="display: table; width: 100%;">
+			
+				<!-- Marco un artículo, texto con identidad propia, de la web con su etiqueta semantica -->
+				<article style="float: left; width: 65%;">
+					<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate 
+					accumsan dui in vulputate. In tincidunt in odio sed laoreet. Quisque quis ipsum 
+					non ipsum convallis vestibulum id a nisi. Suspendisse a odio iaculis, blandit ex 
+					porta, rhoncus sem. Etiam id tellus vitae elit fermentum semper. Curabitur 
+					vestibulum ipsum et venenatis pulvinar. Donec ullamcorper mi eget ex convallis, 
+					ac fermentum ante tincidunt. In enim ligula, malesuada eget egestas nec, efficitur 
+					a nibh. Integer sodales ligula risus, facilisis tristique eros elementum sed. 
+					Integer mi est, vehicula non quam sit amet, iaculis ultrices felis. In non posuere 
+					enim. Mauris mattis, mi nec eleifend tincidunt, diam magna eleifend augue, a 
+					egestas nunc nulla vitae est. </p>
+					
+					<p>Sed ut sagittis lectus, vel fermentum nulla. Donec tristique bibendum libero. 
+					Sed tempus tellus eu lobortis sollicitudin. Phasellus pharetra id nisi a auctor. 
+					Aenean venenatis ornare purus nec porttitor. Duis risus ante, laoreet in consequat 
+					sit amet, pulvinar eget quam. Sed congue ullamcorper sapien ac fermentum. Aliquam 
+					maximus hendrerit nisi, et commodo elit sodales vel. </p>
+				</article>
+				
+				<!-- Marco una sección lateral dentro de la sección que también contiene el artículo con su etiqueta semantica -->
+				<aside style="float: right; width: 30%;">
+					<img src="https://i0.wp.com/www.diariodelaalimentacionsana.com/wp-content/uploads/2017/06/ARCOIRIS-DE-FRUTAS-Y-VER.jpg?resize=300%2C193">
+				</aside>
+				
+			</section>
+			
+			<hr>
+
+			<!-- En esta sección simplemente meto una foto colorida para hacer de separador -->
+			<section>
+				<img src="https://statics-diariomedico.uecdn.es/cms/2019/06/verduras.jpg" width="1000px">
+			</section>
+
+			<hr>
+			
+			<!-- Marco una sección de la web con su etiqueta semantica -->
+			<section style="display: table; width: 100%;">
+			
+				<!-- Marco un artículo, texto con identidad propia, de la web con su etiqueta semantica -->
+				<article style="float: right; width: 65%;">
+					<p>Nulla facilisis leo ut enim pretium, at auctor est efficitur. In aliquet, dolor 
+					a tincidunt laoreet, dolor ligula volutpat augue, nec cursus massa velit vitae ex. 
+					Sed ut velit purus. Curabitur est diam, aliquam in mi a, elementum consequat dolor. 
+					Ut placerat consectetur velit. Mauris tincidunt mi quis bibendum pulvinar. Suspendisse 
+					pellentesque mollis vestibulum. Duis varius, mi at congue rhoncus, turpis mauris 
+					ultricies nisl, sit amet gravida justo est a nulla. Sed pharetra maximus urna vel 
+					ultrices. Quisque egestas, enim quis tempor ultricies, nisi purus condimentum nisl, 
+					vel semper mi diam eget est. Curabitur ipsum ex, vehicula vitae arcu vel, tempus 
+					facilisis justo. Suspendisse aliquam nisi massa. Ut feugiat varius vehicula. Nulla 
+					dapibus sed sapien sit amet aliquet. Fusce viverra quam eget arcu mattis consequat.</p>
+					
+					<p>Morbi quam ex, efficitur sit amet tempor a, blandit in ligula. Nunc dapibus vulputate 
+					elit vitae tempor. Vestibulum elementum vehicula felis id blandit. Nam hendrerit velit 
+					urna, at pretium dolor elementum dapibus. Proin maximus orci ut nisl aliquam porta id 
+					sed risus. Suspendisse viverra aliquam mollis. Vestibulum egestas vulputate dolor quis 
+					bibendum.</p>
+					
+					<p>In quis feugiat est. Maecenas iaculis aliquam nisl, eget malesuada eros molestie ac. 
+					Sed tristique congue posuere. Duis mattis id neque eget venenatis. Nullam metus eros, 
+					ullamcorper in pulvinar sit amet, tristique eget nulla. Donec malesuada quam augue, eget 
+					viverra odio convallis vulputate. Aliquam quis massa ac magna aliquam mollis. In ac massa 
+					interdum, eleifend turpis eget, mattis ante. Duis porta pulvinar massa, eget eleifend leo 
+					fringilla quis. Quisque rhoncus fringilla neque et suscipit. Morbi justo ex, accumsan in 
+					venenatis nec, molestie a tellus. Suspendisse eu lectus nisi. Donec sem metus, consequat 
+					vitae lacus a, scelerisque gravida lacus. Fusce ultricies vitae arcu a rutrum. </p>
+				</article>
+				
+				<!-- Marco una sección lateral dentro de la sección que también contiene el artículo con su etiqueta semantica -->
+				<aside style="float: left; width: 30%;">
+					<img src="https://i.pinimg.com/originals/c0/08/ca/c008ca1dba01e51aa417876b6e3d1341.jpg" width="300px">
+				</aside>
+				
+			</section>
+			
+			<hr>
+			
+			<!-- En esta sección simplemente meto una foto colorida para hacer de separador -->
+			<section>
+				<img src="https://www.salud.mapfre.es/wp-content/uploads/2016/07/prevencion-cancer-frutas-verduras-3-1100x408.jpg" width="1000px">
+			</section>
+			
+			<hr>
+			
+						<!-- Marco una sección de la web con su etiqueta semantica -->
+			<section style="display: table; width: 100%;">
+			
+				<!-- Marco un artículo, texto con identidad propia, de la web con su etiqueta semantica -->
+				<article style="float: right; width: 35%;">
+					<p><h3 align="center" style="font-family: Verdana, Geneva, sans-serif">
+						<u>Horario de atención al cliente</u><br>
+						<br>
+						L - S:  9:00 - 13:30<br>
+						<br>
+						L - V: 16:00 - 19:30<br>
+						<br>
+						<br>
+						<u>Teléfonos de contacto</u><br>
+						<br>
+						964 12 34 56<br>
+						<br>
+						612 34 56 78<br>
+						<br>
+						<br>
+						<u>Correo electrónico</u><br>
+						<br>
+						info@frutasyverdurasonline.com<br>
+					</h3></p>
+				</article>
+				
+				<!-- Marco una sección lateral dentro de la sección que también contiene el artículo con su etiqueta semantica -->
+				<aside style="float: left; width: 60%;">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.3820930323077!2d-0.044600784216078965!3d39.97756577941858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd600083e9182557%3A0xbf83b348b57694a4!2sCalle%20Herrero%2C%2067%2C%2012005%20Castell%C3%B3n%20de%20la%20Plana%2C%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1576196114447!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</aside>
+				
+			</section>
+			
+			<hr>
+			
+			<!-- En esta sección simplemente meto una foto colorida para hacer de separador -->
+			<section>
+				<img src="https://media.scoolinary.app/blog/images/2021/02/hortalizas-portada.jpg" width="1000px">
+			</section>
+			
+			<hr>
+			
+			<!-- Marco el pie de página de la web con su etiqueta semantica -->
+			<footer>
+				<img src="https://cdn.pixabay.com/photo/2016/11/27/19/03/social-networks-1863613__340.png">
+				<img src="https://img.freepik.com/vector-premium/logotipo-frutas-verduras_7085-159.jpg" width="380px" style="float: right">
+			</footer>
+			
+		</div>
+	</body>
+
+</html>

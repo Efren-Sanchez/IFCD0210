@@ -1,0 +1,254 @@
+
+body {
+	background-image: url("../img/fondo-web-blanco.jpg");
+	background-attachment: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Capa que contiene toda la web ---------------------------------- */
+#contenedor {
+	min-width: 50%; 
+	max-width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+
+/* Cabecera -------------------------------------------------------- */
+header {
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	height: 100%;
+	padding-top: 5%;
+}
+
+header h1 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 300%;
+	font-style: italic;
+	color: white;
+	text-transform: uppercase;
+	position: absolute;
+    left: 10%;
+	top: 5%
+}
+
+header img {
+	border-radius: 25px;
+}
+
+/* Menú principal -------------------------------------------------------- */
+nav {
+	overflow: hidden;
+	background-color: #333;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	min-width: 460px; /* Full width */
+	border-radius: 0 0 25px 25px;
+	padding-left: 15px;
+}
+
+ /* unvisited link */
+nav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+
+/* mouse over link */
+nav a:hover {
+	background: #ddd;
+	color: black;
+	/*text-decoration: underline;*/
+}
+
+/* Secciones --------------------------------------------------------- */
+
+section {
+	display: table; 
+	width: 100%;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.article_izq {
+	float: left; 
+	width: 75%;
+	text-align: justify;
+	padding-left: 15px;
+}
+
+.article_der {
+	float: right; 
+	width: 75%;
+	text-align: justify;
+	padding-left: 15px;
+}
+
+.aside_der {
+	float: right; 
+	width: 20%;
+	
+}
+
+.aside_der img {
+	border-radius: 25px;
+	box-shadow: 10px 10px 5px grey;
+	display: inline-block;
+	margin-left: -25px;
+	
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	height: 100%;
+}
+
+.aside_izq {
+	float: left; 
+	width: 20%;
+}
+
+.aside_izq img {
+	border-radius: 25px;
+	box-shadow: 10px 10px 5px grey;
+	display: inline-block;
+	margin: 25px;
+	
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	height: 100%;
+}
+ 
+#section_texto {
+	background-color: white;
+	border-radius: 25px;
+}
+
+#imagenes {
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+}
+
+#imagenes img{
+	border-radius: 25px;
+	margin: 15px;
+	box-shadow: 10px 10px 5px grey;
+	display: inline-block;
+	height: 225px;
+	width: 225px;
+	padding: 20px;
+
+}
+
+#imagenes img:hover{
+	box-shadow: 30px 30px 30px grey;
+}
+
+/* Footer --------------------------------------------------------- */
+footer {
+	background-color: #ddd;
+	width: 100%;
+	height: 100%;
+	margin-top: 25px;
+	border-radius: 25px;
+	text-align: center;
+	overflow: auto;
+}
+
+footer p {
+	color: black;
+	font-size: 120%;
+}
+
+.footer_img_izq {
+	border-radius: 25px;
+	margin: 30px 15px 15px 15px;
+	float: left;
+}
+
+.footer_img_der {
+	border-radius: 25px;
+	margin: 15px;
+	float: right;
+}
+
+/* Jugando con las capas ------------------------------------------ */
+#capas_visibles {
+	background-color: lightblue;
+	border-radius: 15px;
+	position: relative;
+	/* height: 250px; */
+}
+
+#capas_visibles ul {
+	list-style-type: none;
+	margin: 10px;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+}
+
+#capas_visibles li {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+/* Change the link color on hover */
+#capas_visibles li:hover {
+	background-color: #555;
+	color: white;
+}
+
+#capas_visibles li>div { 
+	display: none; 
+}
+
+#capas_visibles li:hover>div { 
+	display: block; 
+	/*float: right;*/
+	position: absolute;
+    right: 400px;
+	top: 40px;
+}
+
+#capas_visibles li>div>img { 
+	border-radius: 25px;
+	box-shadow: 10px 10px 5px grey;
+}
+
+/* Enlaces -------------------------------------------------------- */
+ /* unvisited link * /
+a:link {
+  color: red;
+}
+
+/* visited link * /
+a:visited {
+  color: green;
+}
+
+/* mouse over link * /
+a:hover {
+  color: hotpink;
+}
+
+/* selected link * /
+a:active {
+  color: blue;
+} 
+
+
+
+
