@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+-->
+<html> 
+
+	<!-- Cabecera de la página -->
+	<head>
+	
+		<!-- Título de la ventana o pestaña -->
+		<title> Título de la página web </title>
+		
+		<!-- Esta etiqueta especifica la codificación de la página -->
+		<meta charset="UTF-8">
+		
+		<!-- Esta es la descripción del sitio web -->
+		<meta name="description" content="Esqueleto de web">
+
+		<!-- Estas son las palabras clave del sitio web -->
+		<meta name="keywords" content="Esqueleto de web">
+		
+		<!-- Aquí se especifica el autor de la web -->
+		<meta name="author" content="Efrén Sánchez">
+		
+		<!-- Código CSS para conseguir que las capas (divs) se comporten como una tabla -->
+		<style type="text/css">
+			.contenedor-tabla{
+				display: table;
+				width: 1200px;
+			}
+
+			.contenedor-fila-par{
+				display: table-row;
+				background-color: #CCCCCC;
+			}
+			
+			.contenedor-fila-impar{
+				display: table-row;
+				background-color: #999999;
+			}
+
+			.contenedor-columna{
+				display: table-cell;
+			}
+		</style>
+		
+		
+	</head>
+	
+	<!-- Cuerpo de la página -->
+	<body>
+	
+		<div align="center">
+
+			<!-- Utilizo esta tabla para dividir en zonas toda la web y hacer una maquetación rudimentaria -->
+			<div class="contenedor-tabla">
+				
+				<!-- Esta capa contiene la acbecera de página -->
+				<div class="contenedor-fila-impar">
+					<div class="contenedor-columna">
+						
+						<!-- Cabecera del cuerpo de la web -->
+						<h1 align="center" valign="top">Título de la web</h1>
+					
+					</div>
+				</div>
+				
+				<!-- Esta capa el menú de navegación de la página -->
+				<div class="contenedor-fila-par">
+					<div class="contenedor-columna">
+						<p align="center">
+							| 
+							<a href="index.html">Inicio</a> |
+							<a href="cv.html">Currículum</a> |
+							<a href="imagenes.html">Imágenes</a> |
+							<a href="enlaces.html">Enlaces</a> |
+							<a href="contacto.html">Contacto</a> |
+							
+						</p>
+					</div>
+				</div>
+				
+				<!-- Esta capa contiene la información principal de la página -->
+				<div class="contenedor-fila-impar">
+					<div class="contenedor-columna">
+
+						<!-- Aquí empezaría el cuerpo de la página -->
+						<!-- ------------------------------------------------------------------- -->
+						
+						<!-- En la sección principal de la página meto una estructura similar al 
+							 esqueleto de la web, pero utilizando tonos rojos para diferenciarla -->
+							 
+						<!-- Centro la tabla -->
+						<div align="center">
+						
+							<!-- La tabla ocupará un 70% del ancho de la centana -->
+							<table width="70%" cellspacing="0">
+		
+								<!-- Esta fila la utilizaré para el título del cuerpo -->
+								<tr style="background:#AA0000; height:75px;">
+									<td colspan="3">
+										<!-- Cabecera del cuerpo de la web -->
+										<h1 align="center" valign="top">Título de la web</h1>
+
+									</td>
+								</tr>
+								
+								<!-- Esta fila la utilizaré para el menú horizontal -->
+								<tr style="background:#CC0000">
+									<td colspan="3">
+										<!-- Aquí empieza el menú -->
+										<!-- Menú horizontal de enlaces separados por carácteres -->
+										<!-- <hr> -->
+										
+										<p align="center">
+											| 
+											<a href="index.html">Inicio</a> |
+											<a href="cv.html">Currículum</a> |
+											<a href="imagenes.html">Imágenes</a> |
+											<a href="enlaces.html">Enlaces</a> |
+											<a href="contacto.html">Contacto</a> |
+											
+										</p>
+										
+										<!-- <hr> -->
+										<!-- Aquí acaba el menú -->
+									</td>
+								</tr>
+
+								<!-- Esta fila la utilizaré para el cuerpo de la web -->
+								<tr style="height:300px;">
+									<td style="background:#AA0000;" width="20%">
+										<!-- Aquí empezaría el cuerpo de la página -->
+										
+
+									</td>
+									<td style="background:#DD0000;">
+										<!-- Aquí empezaría el cuerpo de la página -->
+										
+
+									</td>
+									<td style="background:#AA0000;" width="20%">
+										<!-- Aquí empezaría el cuerpo de la página -->
+										
+
+									</td>
+								</tr>
+								
+								<!-- Esta fila la utilizaré para el pie de la web -->
+								<tr style="background:#CC0000; height:35px;	">
+									<td colspan="3">
+										<!-- Aquí empezaría el pie de la página -->
+										<!-- <hr> -->
+										<p align="center">Pie de la página</p>
+									</td>
+								</tr>
+							</table>
+						
+						</div>	
+						<!-- ----------------------------------------------------------------------------- -->
+					</div>
+				</div>
+			
+				<!-- Esta capa contiene el pie de página -->
+				<div class="contenedor-fila-par">
+					<div class="contenedor-columna">
+						
+						<!-- Aquí empezaría el pie de la página -->
+						<p align="center">Pie de la página</p>
+						
+					</div>
+				</div>
+<!--			
+			<div class="contenedor-fila">
+				<div class="contenedor-columna">
+					Columna 1
+				</div>
+
+				<div class="contenedor-columna">
+					Columna 2
+				</div>
+
+				<div class="contenedor-columna">
+					Columna 3
+				</div>
+			</div>
+-->			
+			</div>
+		</div>
+	
+	</body>
+
+</html>

@@ -1,0 +1,176 @@
+
+body {
+	background-image: url("../img/fondo-web-blanco.jpg");
+	background-attachment: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Capa que contiene toda la web ---------------------------------- */
+#contenedor {
+	min-width: 600px; 
+	max-width: 1000px;
+	margin: auto;
+}
+
+/* Cabecera -------------------------------------------------------- */
+header {
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	height: 100%;
+	/* min-width: 50%; */
+	padding-top: 5%;
+}
+
+header h1 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 300%;
+	font-style: italic;
+	color: red;
+	text-transform: uppercase;
+	position: absolute;
+    left: 0px;
+	top: -30px;
+	background-color: #ddd;
+	width: 100%;
+	border-radius: 25px;
+}
+
+/* Secciones --------------------------------------------------------- */
+
+section {
+	display: table; 
+	width: 100%;
+	margin-top: 10px;
+	padding-top: 10px;
+	position:relative;
+	top: 25px;
+}
+
+/* Footer --------------------------------------------------------- */
+footer {
+	background-color: #ddd;
+	width: 100%;
+	height: 100%;
+	margin-top: 25px;
+	border-radius: 25px;
+	text-align: center;
+	overflow: auto;
+	position:relative;
+	top: 20px;	
+}
+
+footer p {
+	color: black;
+	font-size: 120%;
+}
+
+
+/* Formulario ----------------------------------------------------- */
+fieldset {
+	border-radius: 25px;
+	box-shadow: 10px 10px 5px grey;
+}
+
+input, select {
+	border-radius: 25px;
+
+}
+
+textarea {
+	border-radius: 25px;
+	padding: 10px;
+}
+
+.botones {
+	text-align: center;
+}
+
+/* input[type=submit] {*/
+.boton_ok {
+
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+/* input[type=reset] { */
+.boton_reset {
+	background-color: #FF0000;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.boton_cambio {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.ok {
+	background-color: white; 
+	color: black; 
+	border: 2px solid #4CAF50;
+}
+
+.ok:hover {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.reset {
+	background-color: white; 
+	color: black; 
+	border: 2px solid #f44336;	
+}
+
+.reset:hover {
+	background-color: #f44336;
+	color: white;
+}
+
+
+/* Enlaces -------------------------------------------------------- */
+ /* unvisited link * /
+a:link {
+  color: red;
+}
+
+/* visited link * /
+a:visited {
+  color: green;
+}
+
+/* mouse over link * /
+a:hover {
+  color: hotpink;
+}
+
+/* selected link * /
+a:active {
+  color: blue;
+} 
+
+
+
+

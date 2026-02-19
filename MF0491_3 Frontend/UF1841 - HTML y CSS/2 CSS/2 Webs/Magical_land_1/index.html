@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>MAGICAL LAND</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/logoMagicLand_icon.png" size= "64x64" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/acciones.js"></script> 
+</head>
+    <body>
+        <div id="contenedor">     
+            <div class="header"><!--inicio cabecera y menu-->          
+                <div id="cabecera">         
+                    <div class="menuCabecera">
+                        <div class="menuCabecera-left">
+                            <a><img class="redesSociales" src="images/facebock.png" title="Magicaland Onda"></a>
+                            <a><img class="redesSociales" src="images/instagram.png" title="Magicaland.onda"></a>
+                            <a href="mailto:magicaland.onda@gmail.com"><img class="redesSociales" src="images/gmail.png" title="magicaland.onda@gmail.comm"></a>
+                        </div>
+                        <div class="menuCabecera-right"> 
+                            <a href="index.html">Home</a>
+                            <a href="#subContacto">Contacto</a>
+                        </div>  
+                    </div> 
+                        <div class="imgCabecera">
+                            <div id="fondoCabecera"><img src="images/cabecera_ok_sin.jpg" alt="cabecera magig land"></div>
+                            <div class="animationHead">
+                                <span id="bee1"><img src="images/beeBig.png" alt="Bee"></span>
+                                <span id="bee2"><img src="images/beeLittle.png" alt="Bee"></span>
+                                <span id="ninoB"><img src="images/ninoBlue.png" alt="Nino"></span>
+                                <span id="ninoG"><img src="images/ninoGreen.png" alt="Nino"></span>
+                                <span id="ninoY"><img src="images/ninoYellow.png" alt="Nino"></span>
+                                <span id="logoMagic"><img src="images/logoMagicLand_head.png" alt="logo Magic Land"></span>
+                              </div>
+                        </div>
+                </div>
+            </div> <!--fin cabecera y menu-->
+            <div class="main">
+                <div id="paneles">
+                    <a id="myBtn" onmouseover="panelQuieneSomos()"><img class="panelQuieneSomos panel1" src="images/quienesSomos.png" alt="panel quien somos"></a>
+                    <a id="myBtn2" onmouseover="panelMetodo()"><img class="panelMetodo panel1" src="images/elMetodo.png" alt="panel el metodo"></a>
+                    <a id="myBtn3" onmouseover="panelPersonal()"><img class="panelPersonal panel2" src="images/personalDocente.png" alt="panel personal docente"></a>
+                    <a id="myBtn4" onmouseover="panelServicios()"><img class="panelServicios panel2" src="images/servicios-adicionales.png" alt="panel servicios"></a>
+                    <a id="myBtn5" onmouseover="panelNovedades()"><img class="panelNovedades panel2" src="images/novedades.png" alt="panel "></a>
+                </div> 
+            </div>
+        </div><!--div contenedor-->                               
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times</span><!--x=&times;-->
+                    <img id="imagenModal" src="images/quienesSomos.jpg" alt="panel quien somos">
+                </div>
+            </div>
+            <!-- The Modal2 -->
+            <div id="myModal2" class="modal2">
+            <!-- Modal content2 -->
+                <div class="modal-content">
+                <span class="close2">&times</span>
+                <img id="imagenModal" src="images/elMetodo.jpg" alt="panel el metodo">
+                </div>
+            </div>
+            <!-- The Modal3 -->
+            <div id="myModal3" class="modal3">
+            <!-- Modal content3 -->
+                <div class="modal-content">
+                <span class="close3">&times</span>
+                <img id="imagenModal" src="images/personalDocente.jpg" alt="panel personal">
+                </div>
+            </div>
+            <!-- The Modal4 -->
+            <div id="myModal4" class="modal4">
+            <!-- Modal content4 -->
+                <div class="modal-content">
+                    <span class="close4">&times</span>
+                    <img id="imagenModal" src="images/servicios-adicionales.jpg" alt="panel servicios">
+                </div>
+            </div>
+            <!-- The Modal5 -->
+            <div id="myModal5" class="modal5">
+            <!-- Modal content5 -->
+                <div class="modal-content">
+                    <span class="close5">&times</span>
+                    <img id="imagenModal" src="images/novedades.jpg" alt="panel novedades">
+            </div>
+            </div>
+             <!--slider-->
+             <div class="slideshow-container">  
+                <div class="mySlides fade">
+                    <img src="images/BOU_8635.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8641.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8648.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8739.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8769.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8762.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8828.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BOU_8857.jpg">
+                </div>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </div><!--fin slider-->     
+        <div class="main-formulario" id="subContacto">        
+            <div class="DireccionContacto">
+                <p class="tituloContacto">CONTACTO</p>
+                <p>C/ Virgen del Carmen, 7 Bajo<br>
+                12200 Onda, Castellón<br>
+                Tel. 619 751 653 / 615 839 184<br>
+                </p>
+                <a href="mailto:magicaland.onda@gmail.com">magicaland.onda@gmail.com</a>
+            </div>
+        <div id="formulario">  
+            <div>
+                <span><iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.0325080901666!2d-0.26712338436098537!3d39.
+                    963025891030895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd600a8ba807c83d%3A0xe4b1bfc0b31736ef!2sCalle%20Virgen%20
+                    Carmen%2C%207%2C%2012200%20Onda%2C%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1594567542897!5m2!1ses!2ses" 
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></span> 
+            <form action="#" method="#" name="formulario">   
+                <fieldset class="contenedorContacto">
+                <legend>Formulario de Contacto</legend>
+                <!--<label>Nombre:</label>-->
+                    <input id="datos" type="text" name="nombre" pattern="[a-zA-Z.,´]{3,50}" placeholder="Nombre:"  minlength="1" maxlength="50" required><br>                            
+                    <input id="datos" type="text" name="apellido" pattern="[a-zA-Z.,´]{3,50}" placeholder="Apellido:"  minlength="1" maxlength="50" required><br>                           
+                    <input id="datos" type="email" name="correo" placeholder="Email:"required><br>                          
+                    <input id="datos" type="tel" name="telefono" placeholder="Tel:" pattern= "[6-9]{1} [0-9]{8}" maxlength="9" required><br>  
+                    <textarea id="datos" rows="10" cols="46" pattern="[a-zA-Z.,´]{3,50}"  placeholder="Mensaje..." minlength="3" maxlength="100" required></textarea><br>
+                    <input  type="submit" name="enviar" value="Enviar" id="enviar">
+                </fieldset>
+            </form>      
+            </div>
+        </div>
+    </div><!--div main-formulario-->  
+        <footer>
+            <div class="container-footer">
+                <!--<span id="fotoLocal"><img src="images/local_footer.jpg"></span> -->
+                <div class ="fotosFooter">
+                    <img src="images/BOU_8678.jpg" alt="#">
+                    <img src="images/BOU_8749.jpg" alt="#">
+                    <img src="images/BOU_8846.jpg" alt="#">   
+                    <img src="images/BOU_8717.jpg" alt="#">
+                </div>
+                    <div class="containerDireccion">
+                        <p>C/ Virgen del Carmen, 7 Bajo<br>
+                        12200 Onda, Castellón<br>
+                        Tel. 619 751 653 / 615 839 184<br>
+                        </p>
+                        <a href="mailto:magicaland.onda@gmail.com">magicaland.onda@gmail.com</a>
+                        <p id="submarine"><img src="images/logoSubmarino.png"></p>
+                    </div>
+                    <div class ="etiquetasFooter">
+                        <img src="images/CAMBRIDGE-PRESS.jpg" alt="cambridge Press">
+                        <img src="images/LABORA-300x165.jpg" alt="labora">
+                        <img src="images/SEPE.jpg" alt="sepe">
+                        <img src="images/CECAP.jpg" alt="cecap">
+                    </div>
+            </div>
+            <div id="footer-info">
+                <span id="magicLand">MAGICAL LAND </span>English school for Babies, Kids and Teens
+                    <a href="#">Aviso Legal</a>
+                - <a href="#">Política de Privacidad</a>
+            <!--<a href="https://www.centroformacionolimpia.com/aviso-legal/">Aviso Legal</a>
+                - <a href="https://www.centroformacionolimpia.com/politica-de-privacidad/">Política de Privacidad</a>--><!--activar si es necesario-->
+            </div>	
+        </footer>    
+            <script>
+                var slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                    }
+            </script>  
+    </body>
+</html>

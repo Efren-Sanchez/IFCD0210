@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejemplo de una pagina web de nivel medio-basico</title>
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <style>
+        /* Los tipos de letra no estándar hay que importarlos */
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        body {
+            font-family: Open Sans;
+            margin: 0px;
+        }
+
+        h1 {
+            font-family: Montserrat;
+            font-size: 40px;
+            color: #333;
+            font-weight: 600;
+            letter-spacing: -3px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: Montserrat;
+            font-size: 32px;
+            color: #444;
+            font-weight: 600;
+            letter-spacing: -3px;
+        }
+
+        .cabecera {
+            background-color: #e9e9e9;
+            min-height: 100px;
+            text-align: center;
+        }
+
+        .cabecera a img {
+            margin: 10px 0px;
+        }
+
+        .cuerpo {
+            max-width: 1100px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contenido {
+            float: left;
+            width: 65%;
+        }
+
+        div.contenido img {
+            width: 100%;
+        }
+
+        .barra-lateral {
+            padding-top: 40px;
+            float: right;
+            width: 30%;
+        }
+
+        .barra-lateral h3 {
+            color: #444;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        .pie {
+            clear: both;
+            color: white;
+            background-color: #2C3E50;
+            min-height: 100px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .barra-lateral {
+                display: none;
+            }
+
+            .cuerpo {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contenido {
+                float: none;
+                width: 100%;
+            }
+
+            h1, h2, h3 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecera">
+        <a href="/"><img src="img/gatito_fondo.webp" width="200"/></a>
+    </div>
+    <div class="cuerpo">
+        <div class="contenido">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <h2>1. Cras ut neque augue.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum ipsum risus, et molestie turpis maximus pharetra. Donec in ex interdum, placerat lorem at, interdum dolor. Quisque nec congue sem. Suspendisse placerat non erat id accumsan. Maecenas a iaculis orci, et iaculis lorem. Suspendisse potenti. Proin eget consequat dui. Duis porta justo eros, a sollicitudin urna varius et. Vivamus sollicitudin facilisis odio, sed commodo dui fringilla in. Nulla facilisi. Donec placerat neque vel velit laoreet dignissim. Quisque vitae sem ipsum. </p>
+            <p>Cras ut neque augue. Duis consequat magna nec justo blandit cursus. Phasellus sit amet malesuada lorem, et finibus orci. Proin blandit urna a ex rhoncus bibendum. Pellentesque ornare nisl et lectus lacinia aliquet. Cras sed augue sed enim convallis congue. Mauris rhoncus interdum libero, sit amet sollicitudin sapien fringilla at. Nulla egestas lectus nec ultrices fermentum. Quisque auctor, arcu non auctor sollicitudin, orci turpis euismod nulla, vitae semper justo enim vitae velit. .</p>
+            <p>Donec imperdiet diam quis tortor dignissim, a tempor quam ultricies. Cras lobortis risus eget laoreet feugiat. Duis luctus odio gravida blandit consequat. Vivamus elit nulla, sollicitudin tristique eleifend et, pretium id mi. Sed vitae consequat odio, nec sagittis velit. Curabitur eget viverra neque. Mauris consequat massa nisi, at euismod nisl semper eget. Aliquam dignissim pulvinar justo, vel varius elit fringilla a. Donec pellentesque aliquam euismod. Fusce lacinia enim congue suscipit accumsan. Vestibulum dolor eros, porta quis dapibus non, rutrum tempor lectus. Etiam neque ligula, ultricies fringilla convallis vitae, congue in dui. Donec lobortis ornare quam non tincidunt. Ut eget erat pulvinar tellus semper varius. </p>
+            <h2>2. Donec imperdiet diam quis tortor dignissim</h2>
+            <p>Duis imperdiet vel libero vel sagittis. Cras ullamcorper justo at dui mollis, vitae semper augue tincidunt. Nulla facilisi. Phasellus sollicitudin dapibus tortor, et tempus augue tempor luctus. Nullam dapibus ipsum condimentum vulputate pharetra. Vestibulum commodo ligula neque, et egestas leo feugiat suscipit. Integer cursus mauris quis est commodo ultrices. Vestibulum sollicitudin, velit elementum pharetra iaculis, libero leo rutrum dui, sit amet vehicula lacus sapien sagittis risus. Fusce finibus ante ipsum, vitae faucibus quam varius vel. Curabitur et magna quis quam posuere tincidunt ut ut sapien. Morbi at volutpat elit, gravida pharetra sapien. Vivamus tincidunt auctor massa sed lobortis. Nam vehicula nisi eu dui sollicitudin, sed sagittis augue tempus. </p>
+            <p>Phasellus dictum metus vitae mattis facilisis. Aenean quis lectus quam. Sed a interdum eros. Donec sed mauris a orci consequat pharetra vitae vitae orci. Fusce in luctus est. Donec eleifend nisl odio. Mauris eu commodo augue. Etiam augue turpis, ultrices et laoreet et, iaculis pellentesque tortor. Etiam vehicula, lacus eu varius ultrices, mauris nulla semper diam, id mattis ante dui nec tortor. Fusce venenatis nunc arcu, eu sollicitudin quam maximus id. Praesent quis ultricies justo. </p>
+            <p>Curabitur et quam at purus mollis dapibus sit amet at felis. Mauris porta augue odio, at consequat lorem sollicitudin cursus. Donec tincidunt mi efficitur dolor laoreet bibendum. Sed vulputate maximus ex vel vestibulum. Etiam sit amet nibh varius, volutpat ipsum ut, gravida metus. Vivamus velit diam, interdum id tincidunt a, vehicula a lacus. Vestibulum mi lorem, pulvinar porttitor eros nec, scelerisque aliquet dolor. Integer viverra ipsum sed interdum faucibus. </p>
+            <h2>3. Nullam justo elit, suscipit vitae orci ut, volutpat maximus leo</h2>
+            <p>Praesent at magna justo. Vivamus malesuada quis enim bibendum vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eu urna vitae neque vehicula feugiat. Nullam condimentum ligula eget semper vestibulum. Fusce commodo lacus urna, vitae ullamcorper dui posuere sed. Praesent dictum at turpis convallis iaculis. Ut posuere ipsum ac justo luctus, vitae porta est tempor. Etiam tristique ac nulla posuere ornare. Integer lorem nunc, ultricies et semper eu, ullamcorper sed quam. Donec tincidunt magna convallis egestas lacinia. Vestibulum faucibus maximus elementum. Aliquam erat volutpat. </p>
+            <p>Phasellus diam magna, efficitur mollis nisi malesuada, mattis semper nisl. Nunc id mi non libero aliquam elementum. Proin a diam pretium, rhoncus urna ut, facilisis erat. Phasellus eget finibus mi, vel malesuada sapien. Vestibulum sit amet est vehicula felis varius egestas. Integer nunc velit, blandit quis eros nec, dictum euismod leo. Sed id metus in diam auctor interdum vel sed leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sed ante id nisl convallis euismod. Aliquam eu convallis neque. Sed imperdiet arcu sit amet ultricies varius. Aenean vitae erat at odio pharetra aliquam. </p>
+            <p>Praesent vitae condimentum mauris, non ultrices augue. Phasellus in enim iaculis, congue leo id, posuere dui. Fusce porta lacus quam, id porta arcu eleifend et. Phasellus commodo placerat odio, sit amet faucibus felis. Aliquam sed ultrices augue, ac rhoncus purus. Ut laoreet, massa sed suscipit lacinia, libero mi suscipit turpis, a dapibus erat diam in magna. Mauris at metus vel ante suscipit maximus. Donec mollis arcu at ipsum aliquam, nec pharetra dolor sollicitudin. Vestibulum sem purus, blandit a auctor sit amet, luctus sit amet tellus. Nam a ligula interdum, dapibus lectus sit amet, hendrerit nibh. Sed posuere dolor vitae diam mollis, sed condimentum odio rhoncus. Maecenas vitae diam sapien. Maecenas posuere pulvinar nulla quis lacinia. Curabitur rhoncus a mi et sodales. Etiam dapibus ante eget magna cursus pretium. </p>
+            <p>Mauris id pellentesque dolor. Aliquam erat volutpat. Fusce pharetra neque vitae purus gravida, ut convallis sapien tincidunt. Nunc ut arcu ante. Nam ultrices accumsan libero a imperdiet. Vestibulum sagittis lacus nec ullamcorper scelerisque. Sed molestie lorem quis ante lacinia faucibus. Nullam consequat ligula ut vehicula scelerisque. Curabitur ornare fringilla euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque luctus sit amet odio sit amet pellentesque. Vestibulum tincidunt malesuada lectus vitae interdum. Vivamus ante diam, sagittis in ante eu, luctus porttitor tellus. Nullam ex ipsum, dictum eget gravida nec, tempor eget nisi. </p>
+        </div>
+        <div class="barra-lateral">
+            <a target="_blank" href="#"><img
+                    width="100%"
+                    src="img/gatito_fondo.webp"></a>
+            <div>
+                <h3>Título del menú</h3>
+                <ul>
+                    <li>Item A</li>
+                    <li>Item B</li>
+                    <li>Item C</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pie">
+        <p>Copyright © Lorem Ipsum</p>
+    </div>
+</body>
+</html>

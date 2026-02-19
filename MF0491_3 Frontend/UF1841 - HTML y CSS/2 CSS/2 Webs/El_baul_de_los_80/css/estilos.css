@@ -1,0 +1,245 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: url('../images/fondopintado7.jpg') no-repeat fixed;
+	/*background-size: cover;*/
+	font-family: "Comic Sans MS",Verdana, Geneva, sans-serif;	
+}
+.contenedor {
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	padding: 1% 0%;
+	/*position: relative;*/
+}
+.contenedor header {
+	background-color: rgba(255,255,255,0.7);
+	box-shadow: 2px 0px 6px #222;
+}
+ h1 {
+	padding-top: 20px;
+	text-shadow: 2px 2px 6px #222;
+	word-spacing: 3px;
+}
+
+/*------header---------*/
+
+.titulo {
+	width: auto;
+	border-radius: 25px 25px 0px 0px;
+	height: auto;
+	padding: 15px 0px ;
+	overflow: auto;
+	display: block;
+	text-align: center;	
+}
+.titulo img {
+	width: 68px;
+	float: left;
+	filter: drop-shadow(2px 2px 6px #222);
+	overflow: auto;
+	display: block;
+	margin-left: auto;
+	
+}
+.logo_titulo, h1 {
+	display: inline-block;
+		
+}
+
+/*----------nav----------------*/
+nav {
+	background: rgba(0,0,255,0.4);
+	/*overflow: hidden;*/
+	margin-bottom: 20px;
+	box-shadow: 2px 2px 6px #222;
+	text-align: center;
+	width: 100%;
+		
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	
+}
+nav ul li {
+	display: inline-block;
+	/*float: left;*/
+		
+}
+nav ul li a {
+	padding: 10px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 100%;
+	margin-left: auto;
+	margin-right: auto;
+		
+}
+nav ul li a:hover {
+	background: rgba(100,100,200,0.9);	
+	color: #000;
+	box-shadow: 1px 1px 4px #222 ;
+	display: block;
+		
+}
+nav ul li a:active {
+	display: block;
+	background: rgba(250,250,250,0.3);
+	color: #000;
+	box-shadow: 2px 2px 4px #222 inset;
+}
+#lista {
+	vertical-align: bottom;
+}
+.submenu {
+	width: 100%;
+	text-align: center;	
+	
+}	
+.submenu img {
+	width: 13.5%;
+	height: 10%;
+	margin: 0 1%;
+	display: inline-block;
+	filter: drop-shadow(5px 5px 5px #000);
+	padding-bottom: 1px;		
+}
+
+/*--------------section--------------*/
+/*--inicio--*/
+
+.section {
+	border-radius: 25px 25px 25px 25px;
+	background-color: rgba(255,255,255,0.6);
+	box-shadow: 2px 0px 6px #222;		
+}
+.section #banner {
+	height: 100px;
+	background-image: url('../images/poster9.gif');
+	border-radius: 25px 25px 0px 0px;
+	box-shadow: 0px 2px 6px #222;
+	text-align: center;
+	color: #0000cc;
+	font-size: 20px;
+	font-style: oblique;
+	text-shadow: 2px 2px 4px #fff;
+	padding-top: 25px;
+	overflow: auto;
+	
+}
+#poster {
+	border-radius: 25px 25px 25px 25px;
+	padding: 50px 50px 0px 50px;
+	
+}
+#poster img{
+	width: 100%;
+	border-radius: 25px 25px;
+	margin-bottom: 50px;
+	box-shadow: 7px 7px 10px grey;			
+}
+/*--quienes_somos--*/
+
+.article1, .article2 {
+	text-align:justify; 
+	margin: 25px 50px;
+}
+#dont_worry {
+	color: #0000cc;
+}
+#canicas {
+	width: 100%;
+	text-align: center;
+	/*display: block;*/
+}
+#poster2 {
+	padding: 25px 50px 50px 50px;
+	
+}
+#poster2 img {
+	width: 100%;	
+}
+
+/*---productos---*/
+
+.articulos {
+	width: 100%;
+	text-align: center;	
+	padding-top: 15px;
+
+	
+}
+.etiqueta {
+	background-color:rgba(250,250,250,0.6);
+	border: 2px  #999;
+	border-radius: 25px 0px 25px 0px;
+	box-shadow: 0px 2px 6px #222; 
+	width: 300px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 10px;
+	text-align: center;
+	display: inline-block;
+		
+}
+
+.etiqueta a:link {
+	color: rgba(0,0,255,1);
+	text-decoration: none;
+}
+	
+.etiqueta a:hover {
+	color: #00aa00;
+	text-decoration: none;
+	font-size: 18px;
+	opacity: 0.4;
+}
+/*---donde estamos---*//*---contactos---*/
+
+#mapa, #contactos{
+	width:100%;
+	text-align: center;
+	padding: 50px 0px;
+	
+}	
+#mapa iframe, #contactos img{
+	width:90%;
+	border: 2px solid #a2a2a2;
+	border-radius: 25px 25px;
+	box-shadow: 7px 7px 10px grey;
+}
+
+
+#contactos h3 {
+	text-align: center;
+	font-size: 150%;
+	padding-top: 5%;
+}
+
+/*---------------footer-------------*/
+
+footer {
+	background-color: #fff;
+	border-radius: 25px 25px;
+	box-shadow: 0px 2px 6px #222;
+	padding: 25px 0 25px 0;	
+	margin-top: 10px;
+	/*clear: both;*/
+}
+#formadepago {
+	width:100%;
+}
+#redes_sociales {
+	width: 35%;
+	height: 30%;
+	display: block;
+	margin: auto;
+	/*width: 300px;
+	height: 50px;*/
+}

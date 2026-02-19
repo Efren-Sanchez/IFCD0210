@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="es"> 
+
+	<!-- Cabecera de la página -->
+	<head>
+	
+		<!-- Título de la ventana o pestaña -->
+		<title> Ejemplo de formulario </title>
+		
+		<!-- Esta etiqueta especifica la codificación de la página -->
+		<meta charset="UTF-8">
+		
+		<!-- Esta es la descripción del sitio web -->
+		<meta name="description" content="Faro Solitario - ">
+
+		<!-- Estas son las palabras clave del sitio web -->
+		<meta name="keywords" content="HTML5, html, web, CSS, css, IFCD0110">
+		
+		<!-- Aquí se especifica el autor de la web -->
+		<meta name="author" content="Efrén Sánchez">
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	
+	<!-- Cuerpo de la página -->
+	<body>
+
+		<!-- Utilizo una capa principal para agrupar todos los elementos y poder darle un ancho concreto y centrarla -->
+		<div id="contenedor">
+		
+			<!-- Marco la cabecera de la web con su etiqueta semantica -->
+			<header>
+				<h1>Ejemplo de formulario 2</h1>		
+			</header>
+			
+			<!-- Marco el menú de la web con su etiqueta semantica -->
+			<!--
+			<nav>
+				<a href="index.html">Inicio</a> 
+				<a href="#">Página 1</a>
+				<a href="#">Página 2</a> 
+				<a href="#">Página 3</a> 
+				<a href="#">Contacto</a> 
+			</nav>
+			-->
+		<section>				
+
+			<form name="ej_form_1" action="#">
+			
+				<fieldset>
+					<legend>Ejemplo de formulario 2</legend>
+					
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre" value=""><br>
+					<br>
+					<fieldset>
+						<legend>Sexo</legend>
+						<input type="radio" name="sexo" value="hombre">
+						<label for="sexo_hombre">Hombre</label><br>
+						<input type="radio" name="sexo" value="mujer" checked>
+						<label for="sexo_mujer">Mujer</label><br>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Gustos</legend>
+						<input type="checkbox" name="gustos" value="ajo">
+						<label for="gustos_ajo">Ajo</label><br>
+						<input type="checkbox" name="gustos" value="cebolla">
+						<label for="gustos_cebolla">Cebolla</label><br>
+						<input type="checkbox" name="gustos" value="pimiento">
+						<label for="gustos_pimiento">Pimiento</label><br>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Comida preferida</legend>
+						<input type="radio" name="comida" value="carne">
+						<label for="comida_carne">Carne</label><br>
+						<input type="radio" name="comida" value="pescado">
+						<label for="comida_pescado">Pescado</label><br>
+						<input type="radio" name="comida" value="verdura">
+						<label for="comida_verdura">Verdura</label><br>
+					</fieldset>
+					<br>
+					<label for="comentarios">Comentarios:</label><br>
+					<textarea rows="15" cols="100">Escribe tu comentario aquí.</textarea><br>
+					<br>
+					<label for="ciudad">Ciudad:</label>
+					<select name="ciudad">
+						<optgroup label="Provincia de Castellón">
+							<option value="Castellón">Castellón</option>
+							<option value="Vila-real">Vila-real</option>
+							<option value="Burriana">Burriana</option>
+							<option value="Almazora" selected>Almazora</option>
+						</optgroup>
+						<optgroup label="Resto de España">
+							<option value="Madrid">Madrid</option>
+							<option value="Barcelona">Barcelona</option>
+							<option value="Sevilla">Sevilla</option>
+							<option value="Zaragoza">Zaragoza</option>
+						</optgroup>
+					</select><br>
+					<br>
+					<label for="color">Color favortio:</label>
+					<input type="color" name="color" value="#FF0000"><br>
+					<br>
+					<label for="email">Correo electrónico:</label>
+					<input type="email" name="email"><br>
+					<br>
+					<label for="password">Contraseña:</label>
+					<input type="password" name="password"><br>
+					<br>
+					<label for="anyos">¿Cuántos años tienes?</label>
+					<input type="number" name="anyos" min="0" max="100"><br>
+					<br>
+					<fieldset>
+						<legend>Las horas de tu vida</legend>
+						<label for="fecha">Fecha de hoy:</label>
+						<input type="date" name="fecha_hoy"><br>
+						<br>
+						<label for="mes_nacimiento">¿En qué mes naciste?</label>
+						<input type="month" name="mes_nacimiento"><br>
+						<br>
+						<label for="semana_nacimiento">¿En qué semana naciste?</label>
+						<input type="week" name="semana_nacimiento"><br>
+						<br>
+						<label for="hora_actual">¿Qué hora es?</label>
+						<input type="time" name="hora_actual"><br>
+						<br>
+						<label for="hora_actual">Fecha y hora:</label>
+						<input type="datetime-local" name="hora_actual"><br>
+					</fieldset>
+					<br>
+					<label for="fichero">Selecciona un fichero:</label>
+					<input type="file" name="fichero" value="lalala"><br>
+					<br>
+					Satisfacción:<br>
+					<label for="triste">Triste</label>
+					<input type="range" name="satisfaccion" min="0" max="10">
+					<label for="contento">Contento</label><br>
+					<br>
+					<label for="telefono">Número de teléfono: (123.456.789)</label>
+					<input type="tel" name="telefono" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}"><br>
+					<br>
+					<br>
+					<br>
+					<input type="reset" value="Borrar el formulario">&nbsp;&nbsp;&nbsp;&nbsp;	<br>
+					<br>
+					<br>
+					<br>
+					Teléfono: <input type="tel" name="telefono" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}" maxlength="11">
+				</fieldset>
+			</form>
+
+		</section>
+			
+			
+			<!-- Marco el pie de página de la web con su etiqueta semantica -->
+			<footer>
+				<p><b><i>Página web de ejemplo desarrollada con HTML5 y CSS.</i></b><p>
+				<p>IFCD0110 - Confección y publicación de páginas web</p>
+			</footer>
+			
+		</div>
+	</body>
+
+</html>
