@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula el área de un cuadrado</title>
+</head>
+<body>
+    <button onclick="funcion()">Área de cuadrado</button>
+    <div id="resultado"></div>
+
+    <script>
+        function funcion() { 
+            let area;
+            let lado = prompt("Introduce el lado de un cuadrado: ");
+            // Calculo el área de un cuadrado de lado 'lado'
+
+            // Cualquiera de las dos es válida
+            area = lado * lado;
+            area = lado ** 2;
+
+            // Mostramos el resultado
+            document.getElementById("resultado").innerHTML = "El área de un cuadrado de lado " + lado + " es " + area;
+        }
+    </script>
+</body>
+</html>

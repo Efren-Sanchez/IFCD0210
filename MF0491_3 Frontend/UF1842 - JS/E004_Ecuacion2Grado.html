@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resuelve ecuación de 2º grado</title>
+</head>
+<body>
+    <button onclick="funcion()">Ecuación de 2º grado</button>
+    <div id="resultado"></div>
+
+    <script>
+        function funcion() { 
+            let x1, x2, A, B, C;
+
+            A = prompt("Por favor, introduce el valor del coeficiente A: ");
+            B = prompt("Por favor, introduce el valor del coeficiente B: ");
+            C = prompt("Por favor, introduce el valor del coeficiente C: ");
+
+            x1 = (-B + Math.sqrt(B**2 - 4*A*C)) / (2*A);
+            x2 = (-B - Math.sqrt(B**2 - 4*A*C)) / (2*A);
+
+            document.getElementById("resultado").innerHTML = "La solución a la ecuación " + A + "x<sup>2</sup> + " + B + "x + " + C + " = 0 es: X<sub>1</sub> = " + x1  + " X<sub>2</sub> = " + x2 ;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convierte de millas a kilómetros</title>
+</head>
+<body>
+    <button onclick="funcion()">Conversor de Millas a Km</button>
+    <div id="resultado"></div>
+
+    <script>
+        function funcion() { 
+            let resultado;
+            const KM_MILLA = 1.60934;
+            let millas = prompt("Por favor, introduce las millas: ");
+            
+            // Las dos son válidas
+            let km = millas * 1.60934;
+            //let km = millas * KM_MILLA;
+
+            // Hago la conversión
+            resultado = millas + " millas son " + km + " kilómetros";
+
+            // Muestro el resultado
+            console.log(resultado);
+            alert(resultado);
+            resultado = resultado;
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

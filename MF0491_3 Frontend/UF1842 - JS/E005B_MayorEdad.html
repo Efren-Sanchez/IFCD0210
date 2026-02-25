@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="funcion()">¿Eres mayor de edad?</button>
+    <div id="resultado"></div>
+
+    <script>
+        // En esta versión se ha invertido la condición preguntando lo contrario que en el anterior
+        function funcion() { 
+            let resultado = "";
+            let edad = prompt("Por favor, introduce tu edad: ");
+
+            // Comprobación de que la edad se ha introducido correctamente
+            if (edad < 0 || edad > 120) {
+                resultado = "ERROR: ¡La edad introducida es incorrecta!";
+                document.getElementById("resultado").innerHTML = resultado;
+                return;
+            }
+
+            // Determinación de la mayoría de edad
+            if (edad >= 18) {
+                resultado = "¡Eres mayor de edad! Puedes beber cerveza."
+            } else {
+                resultado = "¡Eres menor de edad! NO puedes beber alcohol."
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

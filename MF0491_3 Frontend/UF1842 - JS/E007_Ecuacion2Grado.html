@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resuelve ecuación de 2º grado</title>
+</head>
+<body>
+    <button onclick="funcion()">Ecuación de 2º grado</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Mejoramos la versión anterior añadiendo validación de errores
+        function funcion() { 
+            let x1, x2, A, B, C;
+
+            A = prompt("Por favor, introduce el valor del coeficiente A: ");
+            B = prompt("Por favor, introduce el valor del coeficiente B: ");
+            C = prompt("Por favor, introduce el valor del coeficiente C: ");
+
+            // Si no es ecuación de 2º grado (A = 0)
+            if (A == 0) {
+                document.getElementById("resultado").innerHTML = "ERROR: El coeficiente A no puede ser 0.";
+                // En este caso, la solcuión sería x1 = -C / B;
+                return;
+            }
+
+            // Si el radicando es negativo
+            if (B**2 - 4*A*C < 0) {
+                document.getElementById("resultado").innerHTML = "ERROR: No se puede hacer la raiz de un número negativo.";
+                return;
+            }
+
+            // Resolvemos la ecuación
+            x1 = (-B + Math.sqrt(B**2 - 4*A*C)) / (2*A);
+            x2 = (-B - Math.sqrt(B**2 - 4*A*C)) / (2*A);
+
+            // Mostramos el resultado por pantalla
+            document.getElementById("resultado").innerHTML = "La solución a la ecuación " + A + "x<sup>2</sup> + " + B + "x + " + C + " = 0 es: X<sub>1</sub> = " + x1  + " X<sub>2</sub> = " + x2 ;
+        }
+    </script>
+</body>
+</html>

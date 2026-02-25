@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el volumen de una esfera</title>
+</head>
+<body>
+    <button onclick="funcion()">Volumen de una esfera</button>
+    <div id="resultado"></div>
+
+    <script>
+        function funcion() { 
+            const PI = 3.141592;    // Puedo definirme la constante con la precisión deseada
+                                    // Math.PI ofrece 15 decimales de precisión
+            let volumen;
+            let radio = prompt("Introduce el radio de una esfera: ");
+            
+            // Calculo el volumen de una esfera
+            // Cualquiera es válida según la precisión esperada
+            //volumen = (4 / 3) * 3.1415 * (radio ** 3);
+            //volumen = (4 / 3) * PI * (radio ** 3);         
+            volumen = (4 / 3) * Math.PI * (radio ** 3);
+
+            document.getElementById("resultado").innerHTML = "El volumen de una esfera de radio " + radio + " es " + volumen;
+        }
+    </script>
+</body>
+</html>
