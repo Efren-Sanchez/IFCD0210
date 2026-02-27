@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pide Positivos</title>
+</head>
+<body>
+    <button onclick="funcion()">Pide números positivos</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Mejoramos la versión anterior añadiendo validación de errores
+        function funcion() { 
+            let num = 1, contador = 0;
+
+            // Pedimos números al usuario hasta que introduzca uno negativo
+            while(num >= 0) {
+                num = prompt("Por favor, introduce un número (negativo para acabar): ");
+                if (num >= 0)
+                    contador++; //contador += 1; //contador = contador + 1;
+            }
+
+            document.getElementById("resultado").innerHTML = "Se han introducido " + contador + "números positivos."
+        }
+    </script>
+</body>
+</html>

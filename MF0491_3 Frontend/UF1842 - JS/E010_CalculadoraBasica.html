@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora básica</title>
+</head>
+<body>
+    <button onclick="funcion()">Calculadora</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Mejoramos la versión anterior añadiendo validación de errores
+        function funcion() { 
+            let op, num1, num2, res, A, B, C;
+
+            op = prompt("Por favor, introduce una opción de las siguientes: " + 
+                        "\n1) Suma" + 
+                        "\n2) Resta" +
+                        "\n3) Multiplicación" +
+                        "\n4) División" + 
+                        "\n5 Ecuación 2º grado");
+
+            if (op == 1) {
+                num1 = prompt("Por favor, introduce el valor del primer sumando: ");
+                num2 = prompt("Por favor, introduce el valor del segundo sumando: ");
+                res = num1 + num2;
+            } else if (op == 2) {
+                num1 = prompt("Por favor, introduce el valor del minuendo: ");
+                num2 = prompt("Por favor, introduce el valor del sustraendo: ");
+                res = num1 - num2;
+            } else if (op == 3) {
+                num1 = prompt("Por favor, introduce el valor del primer multiplicando: ");
+                num2 = prompt("Por favor, introduce el valor del segundo multiplicando: ");
+                res = num1 * num2;
+            } else if (op == 4) {
+                num1 = prompt("Por favor, introduce el valor del dividendo: ");
+                num2 = prompt("Por favor, introduce el valor del divisor: ");
+                res = num1 / num2;
+            } else if (op == 5) {
+                A = prompt("Por favor, introduce el valor del coeficiente A: ");
+                B = prompt("Por favor, introduce el valor del coeficiente B: ");
+                C = prompt("Por favor, introduce el valor del coeficiente C: ");
+
+                // Si no es ecuación de 2º grado (A = 0)
+                if (A == 0) {
+                    document.getElementById("resultado").innerHTML = "ERROR: El coeficiente A no puede ser 0.";
+                    // En este caso, la solcuión sería x1 = -C / B;
+                    return;
+                }
+
+                // Si el radicando es negativo
+                if (B**2 - 4*A*C < 0) {
+                    document.getElementById("resultado").innerHTML = "ERROR: No se puede hacer la raiz de un número negativo.";
+                    return;
+                }
+
+                // Resolvemos la ecuación
+                x1 = (-B + Math.sqrt(B**2 - 4*A*C)) / (2*A);
+                x2 = (-B - Math.sqrt(B**2 - 4*A*C)) / (2*A);
+            } else { res = "ERROR: opción introducida incorrecta."}
+
+
+            // Mostramos el resultado por pantalla
+            document.getElementById("resultado").innerHTML = res;
+        }
+    </script>
+</body>
+</html>

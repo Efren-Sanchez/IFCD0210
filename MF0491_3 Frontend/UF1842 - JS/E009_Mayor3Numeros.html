@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor de 2 números</title>
+</head>
+<body>
+    <button onclick="funcion()">Mayor</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Mejoramos la versión anterior añadiendo validación de errores
+        function funcion() { 
+            let num1, num2, num3, resultado;
+
+            num1 = prompt("Por favor, introduce el valor del primer número: ");
+            num2 = prompt("Por favor, introduce el valor del segundo número: ");
+            num3 = prompt("Por favor, introduce el valor del tercer número: ");
+
+            if (num1 >= num2 && num1 >= num3)      
+                resultado = "El mayor de los números " + num1 + ", " + num2 + " y " + num3 + " es " + num1;
+            else if (num2 >= num1 && num2 >= num3) 
+                resultado = "El mayor de los números " + num1 + ", " + num2 + " y " + num3 + " es " + num2;
+            else                                   
+                resultado = "El mayor de los números " + num1 + ", " + num2 + " y " + num3 + " es " + num3;
+
+            // Mostramos el resultado por pantalla
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

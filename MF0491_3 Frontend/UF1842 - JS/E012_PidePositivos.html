@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par o impar</title>
+</head>
+<body>
+    <button onclick="funcion()">Par o impar</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Mejoramos la versión anterior añadiendo validación de errores
+        function funcion() { 
+            let num =parseInt(prompt("Introduce un número para determinar si es par o impar: "));
+
+            if (num % 2 == 0) 
+                document.getElementById("resultado").innerHTML = "El número es PAR";
+            else
+                document.getElementById("resultado").innerHTML = "El número es IMPAR";
+        }
+    </script>
+</body>
+</html>

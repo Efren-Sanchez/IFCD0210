@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor de 2 números</title>
+</head>
+<body>
+    <button onclick="funcion()">Mayor</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Mejoramos la versión anterior añadiendo validación de errores
+        function funcion() { 
+            let num1, num2, resultado;
+
+            num1 = prompt("Por favor, introduce el valor del primer número: ");
+            num2 = prompt("Por favor, introduce el valor del segundo número: ");
+
+            if (num1 == num2)       resultado = "Los dos números son iguales";
+            else if (num1 > num2)   resultado = "El primer número es mayor";
+            else                    resultado = "El segundo número es mayor";
+
+            // Mostramos el resultado por pantalla
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
